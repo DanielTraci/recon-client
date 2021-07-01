@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+/* .margin {
+  margin: 0 10px !important
+} */
+
+/* .navPadding {
+  padding: 50px;
+} */
+
+ .appPadding {
+  padding: 0 16px 0 16px
+}
+
+.animatedText {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.167;
+  letter-spacing: 0em
+}
+
+.iconsXtext {
+  display: flex;
+	flex-direction: column;
+	align-items: center;  
+}
+
+.smIcons {
+  display: flex;
+	flex-direction: row;
+	align-items: center;  
+}
+
+/* a {
+  color: white;
+  text-decoration: none
+} */
+
+a:hover { 
+  color: #C01F24
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
