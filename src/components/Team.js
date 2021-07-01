@@ -4,9 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
-import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
-import SyncProblemIcon from '@material-ui/icons/SyncProblem';
-import FindInPageIcon from '@material-ui/icons/FindInPage';
 import Box from '@material-ui/core/Box';
 import { useEffect, useRef } from "react";
 import TypeWriterEffect from 'react-typewriter-effect';
@@ -20,7 +17,7 @@ import { LinkedIn } from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import MailIcon from '@material-ui/icons/Mail';
-
+import Container from '@material-ui/core/Container'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -47,9 +44,6 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-around" */
 
     },
-    header: {
-        height: "400px",
-    },
     titles: {
         display: "flex",
         justifyContent: "center",
@@ -75,6 +69,19 @@ const useStyles = makeStyles((theme) => ({
     cardPadding: {
         paddingLeft: "70px",
         paddingRight: "70px",
+    },
+    header: {
+        position: "relative",
+        color: theme.palette.common.white,
+        marginBottom: theme.spacing(4),
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",                
+    },
+    headerContent: {
+        position: "relative",
+        padding: theme.spacing(4),
+        paddingTop: "80px"
 
     }
 
@@ -89,23 +96,24 @@ export default function FullWidthGrid() {
     return (
         <div className={classes.root}>
 
-            <Grid container spacing={3} justify="center">
-                
-
-                <Grid container className={classes.header}>                
-                <Grid item xs={12} sm={6}>
-                <Typography variant="h6" color="primary" component="p">
-                        As a scum sucking contractor, Jeremy enjoys having fun reverse engineering code and building backdoors to get access to the most sensitive data. Being a Red Team SME and Sr. Cyber Investigator, he looks for a good time analyzing an organization's flaws and identifying their weaknesses.
-                    </Typography>
-                </Grid>
-                
-                <Grid item xs={12} sm={6}>
-                <Typography variant="h6" color="primary" component="p">
-                        As a scum sucking contractor, Jeremy enjoys having fun reverse engineering code and building backdoors to get access to the most sensitive data. Being a Red Team SME and Sr. Cyber Investigator, he looks for a good time analyzing an organization's flaws and identifying their weaknesses.
-                    </Typography>
-                </Grid>
-                </Grid>
-
+            
+                <Container maxWidth className={classes.header}>
+                    <Grid container >
+                        <Grid item xs={12} sm={6} >
+                            <div className={classes.headerContent}>
+                                <Typography variant="h3" color="primary" gutterBottom>
+                                Developers
+                                </Typography>
+                                <Typography variant="h5" color="primary" paragraph>
+                                "It all started when we saw a black hoodie for the first time"
+                                </Typography>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </Container>
+            
+                <Grid container spacing={3} justify="center">
+{/*             
                 <Grid item xs={12}>
                     <Typography variant="h3" color="primary" align="center">
                         Developers
@@ -113,7 +121,7 @@ export default function FullWidthGrid() {
                     <Typography variant="h6" color="primary" align="center">
                         "It all started when we saw a black hoodie for the first time"
                     </Typography>
-                </Grid>
+                </Grid> */}
 
                 <Grid container spacing={3} className={classes.cardPadding} justify="center">
 
