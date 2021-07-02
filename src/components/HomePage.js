@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   //---------------
-  header: {
+ /*  header: {
     position: "relative",
     color: theme.palette.common.white,
     marginBottom: theme.spacing(10),
@@ -74,10 +74,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
+    height: "600px"
     
-    
-    
-  },
+  }, */
   headerContent: {
     position: "relative",
     padding: theme.spacing(4),
@@ -97,26 +96,24 @@ export default function FullWidthGrid() {
   return (
     <div className={classes.root}>
 
-      <Container maxWidth className={classes.header}>
+    <div className="header">
+
+      <Container maxWidth>
         <Grid container >
-        <Grid item xs={12} sm={6}>
-        <div className={classes.headerContent}>
-            <Card className={classes.terminal}>
-              <CardContent >
-                <CardHeader className={classes.terminalIcons}
-                  avatar={[
-                    <FiberManualRecordIcon color="error" />,
-                    <FiberManualRecordIcon color="error" />,
-                    <FiberManualRecordIcon color="error" />,
-                  ]}
-                />
-                <Typography color='primary' variant="h5">~CSI Linux is a focused Linux distribution for digital forensics. We developed an open-source 'theme park' for our industry, where we included tons of capabilities for investigations, analysis and response!<TypeWriterEffect text="~" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
-              </CardContent>
-            </Card>
-            </div>
-          </Grid>
-
-
+        <Grid item xs={12} sm={6} >
+              <Card className={classes.terminal}>
+                <CardContent >
+                  <CardHeader className={classes.terminalIcons}
+                    avatar={[
+                      <FiberManualRecordIcon color="error" />,
+                      <FiberManualRecordIcon color="error" />,
+                      <FiberManualRecordIcon color="error" />,
+                    ]}
+                  />
+                  <Typography color='primary'><TypeWriterEffect text="~CSI Linux is a focused Linux distribution for digital forensics. We developed an open-source 'theme park' for our industry, where we included tons of capabilities for investigations, analysis and response!" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={30} cursorColor="#FFFFFF" /></Typography>
+                </CardContent>
+              </Card>
+            </Grid>
 
           <Grid item xs={12} sm={6}>
             <div className={classes.headerContent}>
@@ -136,13 +133,46 @@ export default function FullWidthGrid() {
           </Grid>
         </Grid>
       </Container>
+      </div>
 
 
 
-      {/*       <Grid item xs={12} sm={6} >
-        
-      </Grid>
+      {/*       <Grid container className={classes.sectionOne}>
+            <Grid item xs={12} sm={6} >
+              <Card className={classes.terminal}>
+                <CardContent >
+                  <CardHeader className={classes.terminalIcons}
+                    avatar={[
+                      <FiberManualRecordIcon color="error" />,
+                      <FiberManualRecordIcon color="error" />,
+                      <FiberManualRecordIcon color="error" />,
+                    ]}
+                  />
+                  <Typography color='primary'><TypeWriterEffect text="~CSI Linux is a focused Linux distribution for digital forensics. We developed an open-source 'theme park' for our industry, where we included tons of capabilities for investigations, analysis and response!" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={30} cursorColor="#FFFFFF" /></Typography>
+                </CardContent>
+              </Card>
+
+            </Grid>
+
+
+            <Grid item xs={12} sm={6}>
+              <Card className={classes.terminal}>
+                <CardContent >
+                  <CardHeader className={classes.terminalIcons}
+                    avatar={[
+                      <FiberManualRecordIcon color="error" />,
+                      <FiberManualRecordIcon color="error" />,
+                      <FiberManualRecordIcon color="error" />,
+                    ]}
+                  />
+                  <Typography color='primary'><TypeWriterEffect text="~new CSI Linux 2021.2 is available" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={50} cursorColor="#FFFFFF" /></Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
  */}
+
+
       <Grid className={classes.gridContainer}>
         <Grid container spacing={4}>
 
