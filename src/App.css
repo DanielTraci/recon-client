@@ -91,8 +91,6 @@ a:hover {
 
 @media(max-width: 768px) {
   .header {
-    
-    height: 300px;
     font-size: 5px ;
   }
 }
