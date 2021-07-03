@@ -12,6 +12,7 @@ const theme = createMuiTheme({
         },
     },
     //colors present on the website
+
     palette: {
         primary: {
             //white

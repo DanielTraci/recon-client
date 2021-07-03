@@ -26,7 +26,17 @@ function App(props) {
       name: event.target.name.value,
       email: event.target.email.value,
       message: event.target.message.value,
+/*       bugReport: event.target.bugReport.value, 
+      businessInquiry: event.target.businessInquiry.value, 
+      generalSubject: event.target.generalSubject.value */
     }
+
+    event.target.name.value = ''
+    event.target.email.value = ''
+    event.target.message.value = ''
+/*     event.target.bugReport.value = ''
+    event.target.businessInquiry.value = ''
+    event.target.generalSubject.value = '' */
     axios.post(`http://localhost:5005/api/contact`, newMessage)
     .then((result) => {
       // updates the data in the state

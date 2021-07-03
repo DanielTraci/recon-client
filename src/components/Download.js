@@ -16,11 +16,7 @@ import Link from '@material-ui/core/Link';
 import TypeWriterEffect from 'react-typewriter-effect';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container'
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import FolderIcon from '@material-ui/icons/Folder';
-import ListItemText from '@material-ui/core/ListItemText';
+
 
 
 
@@ -152,7 +148,7 @@ export default function SimpleTabs() {
                                 You can also add a VPN or Tor gateway to your network router for an external network layer of security.
                             </Typography>
                             <Typography variant="body" color="primary" paragraph>
-                                The CSI Linux SIEM has been separated ad is now separate from CSI Linux. MISP, OTX, Malcolm, Moloch, Elasticsearch, Kibana, Logstash, Zeek, and others have been combined into this growing network monitoring and forensic server environment. This will be able to be downloaded onto CSI Linux or used on another system on the network.
+                                The CSI Linux SIEM has been separated and is now separate from CSI Linux. MISP, OTX, Malcolm, Moloch, Elasticsearch, Kibana, Logstash, Zeek, and others have been combined into this growing network monitoring and forensic server environment. This will be able to be downloaded onto CSI Linux or used on another system on the network.
                             </Typography>
 
 
