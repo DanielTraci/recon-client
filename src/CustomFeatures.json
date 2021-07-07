@@ -1,0 +1,41 @@
+[
+    {
+        "name": "CSI Tools (Online Investigation Tools)"
+    },
+    {
+        "name": "Centralized Evidence Capture"
+    },
+    {
+        "name": "Cryptocurrency Wallet Lookup"
+    },
+    {
+        "name": "CSI SIEM (Elasticstack, Zeek, Malcolm, PFRing, and more...)"
+    },
+    {
+        "name": "CSI TorVPN"
+    },
+    {
+        "name": "Custom GUIs for many of the tools to add to the Case Management"
+    },
+    {
+        "name": "Domain and Website Analysis"
+    },
+    {
+        "name": "Forensic Disk Image Mouter"
+    },
+    {
+        "name": "Geolocation for SSID/BSSID/IP"
+    },
+    {
+        "name": "Hash capture of evidence files"
+    },
+    {
+        "name": "Timestamped archive of evidence"
+    },
+    {
+        "name": "Twitter feed pull"
+    },
+    {
+        "name": "Username (Social Media & Adult) Search"
+    }
+]

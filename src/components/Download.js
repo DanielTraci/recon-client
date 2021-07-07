@@ -15,6 +15,7 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import Link from '@material-ui/core/Link';
 import TypeWriterEffect from 'react-typewriter-effect';
 import Button from '@material-ui/core/Button';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import Container from '@material-ui/core/Container'
 
 
@@ -57,20 +58,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    sectionOne: {
-        height: "600px",
-        /*         backgroundImage: `url('./covers/largelogo.png')`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "320px",
-                position: "relative", */
-    },
-
     appbar: {
-        backgroundColor: "#FFFFFF",
-
+        backgroundColor: "#2D2D2D",
     },
-
     terminal: {
         backgroundColor: "#2D2D2D",
     },
@@ -84,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     tabsText: {
-        textColor: "#FFFFFF"
+        color: "#FFFFFF"
     },
 
     ///--------------
@@ -100,8 +90,11 @@ const useStyles = makeStyles((theme) => ({
         position: "relative",
         padding: theme.spacing(4),
         paddingTop: "80px"
-
-    }
+    },
+    cardProps: {
+        backgroundColor: "#2D2D2D",
+        maxWidth: 550,
+    },
 
 }));
 
@@ -121,7 +114,10 @@ export default function SimpleTabs() {
 
 
             <Container maxWidth className={classes.header}>
-                <Grid container >
+                <Grid container spacing={4}
+                        direction="row"
+                        justify="flex-start"
+                        alignItems="center" >
                     <Grid item xs={12} sm={6} >
                         <div className={classes.headerContent}>
                             <Typography variant="h3" color="primary" gutterBottom>
@@ -139,7 +135,6 @@ export default function SimpleTabs() {
                             </Typography>
                             <Typography variant="body" color="primary" paragraph>
                                 CSI Linux 2021.2 has many updated tools, features, and additions.
-
                             </Typography>
                             <Typography variant="body" color="primary" paragraph>
                                 When turned on, the CSI_TorVPN encapsulates all traffic through Tor similar to how Tails works. The CSI_Gateway app is now pointing to at a Whonix gateway VM. This gives you two different options when using the Virtual Appliance. If you are using the bootable version, you can only use the CSI_TorVPN.
@@ -150,15 +145,19 @@ export default function SimpleTabs() {
                             <Typography variant="body" color="primary" paragraph>
                                 The CSI Linux SIEM has been separated and is now separate from CSI Linux. MISP, OTX, Malcolm, Moloch, Elasticsearch, Kibana, Logstash, Zeek, and others have been combined into this growing network monitoring and forensic server environment. This will be able to be downloaded onto CSI Linux or used on another system on the network.
                             </Typography>
-
-
-
-
-
-
                         </div>
                     </Grid>
 
+                    <Grid item xs={12} sm={6} >
+                            <Card className={classes.cardProps}>
+                                <CardActionArea>
+                                    <div className='player-wrapper'>
+                                        <ReactPlayer controls className='react-player' width='100%'
+                                            height='100%' url='https://www.youtube.com/watch?v=EvvN1xFJGvg' />
+                                    </div>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
                 </Grid>
             </Container>
 
@@ -166,13 +165,13 @@ export default function SimpleTabs() {
 
             <div >
                 <AppBar position="static" className={classes.appbar}>
-                    <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered textColor="secondary" >
+                    <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered className={classes.tabsText}>
                         <Tab label="Virtual Appliance" {...a11yProps(0)} />
                         <Tab label="Bootable Image" {...a11yProps(1)} />
                         <Tab label="CSI SIEM" {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
-                <TabPanel value={value} index={0} >
+                <TabPanel value={value} index={0}  >
                     <Typography color='primary' variant="h4" align="center">CSI Linux 2021.2 Virtual Appliance</Typography>
                     <Grid container spacing={4}
                         direction="row"
@@ -251,11 +250,14 @@ export default function SimpleTabs() {
                         </Grid>
                     </Grid>
 
+
+
+
                     <Typography color='primary' variant="h4" align="center">Download</Typography>
                     <Typography color='primary' variant="subtitle2" align="center">MD5 (.7z): 697a960453e9f5c8a850ff2fe33ecde6</Typography>
                     <Typography color='primary' variant="body2" align="center">Please consider seeding after downloaded</Typography>
 
-                    <Grid item xs={12} className={classes.buttons} container
+                    <Grid xs={12} className={classes.buttons} container
                         direction="row"
                         justify="center"
                         alignItems="center">
@@ -264,6 +266,25 @@ export default function SimpleTabs() {
                         <Button variant="outlined" color="primary" href="magnet:?xt=urn:btih:D6DA8DED882C5CF64AAD9EE1E07ACDC5F37F5C89&dn=CSI_Linux_2021.2_Bootable.7z&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2fzephir.monocul.us%3a6969%2fannounce&tr=http%3a%2f%2fshare.camoe.cn%3a8080%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=http%3a%2f%2ftracker.kicks-ass.net%3a80%2fannounce&tr=http%3a%2f%2ftracker.ex.ua%3a80%2fannounce&tr=http%3a%2f%2ftracker.mg64.net%3a6881%2fannounce&tr=http%3a%2f%2ftracker.edoardocolombo.eu%3a6969%2fannounce&tr=http%3a%2f%2ftracker.dutchtracking.nl%3a80%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce">Magnet Link</Button>
                         <Button variant="outlined" color="primary" href="https://www.dropbox.com/s/vntxhbjqidfi31a/CSI_Linux_2021.2_Bootable.7z?dl=0">DROPBOX</Button>
                         <Button variant="outlined" color="primary" href="https://csilinux.com/downloads/CSI_Linux_2021.2_Bootable.7z">Direct Download</Button>
+                    </Grid>
+
+                    <Grid
+                        spacing={4}
+                        container
+                        direction="row"
+                        justify="center"
+                        alignItems="center"
+                    >
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card className={classes.cardProps}>
+                                <CardActionArea>
+                                    <div className='player-wrapper'>
+                                        <ReactPlayer controls className='react-player' width='100%'
+                                            height='100%' url='https://www.youtube.com/watch?v=uFDvxlnFE6w' />
+                                    </div>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
                     </Grid>
                 </TabPanel>
 

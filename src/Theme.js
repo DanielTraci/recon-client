@@ -3,6 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
     //background color
     overrides: {
+      //background color
         MuiCssBaseline: {
           '@global': {
             body: {
@@ -10,16 +11,26 @@ const theme = createMuiTheme({
             },
           },
         },
+        
+        //input label color
+        MuiInputLabel: { // Name of the component ⚛️ / style sheet
+          root: { // Name of the rule
+            color: "#FFFFFF",
+            "&$focused": { // increase the specificity for the pseudo class
+              color: "#C01F24"
+            },
+          },
+        },
     },
-    //colors present on the website
 
+    //colors present on the website
     palette: {
         primary: {
             //white
             main: "#FFFFFF"
         },
         secondary: {
-          main: "#0D2481"
+          main: "#0000ff"
         },
         error: {
             //red
@@ -27,8 +38,7 @@ const theme = createMuiTheme({
         },
     },
     typography: {
-        fontFamily: "Consolas"
-        
+        fontFamily: "Consolas"     
     },
     
 });

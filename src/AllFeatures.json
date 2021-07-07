@@ -1,0 +1,497 @@
+[
+    {
+        "name": "(x)Hydra"
+    },
+    {
+        "name": "Android Backup Extractor"
+    },
+    {
+        "name": "ADB"
+    },
+    {
+        "name": "AFLogical OSE"
+    },
+    {
+        "name": "AlienVault-OTX Python-SDK"
+    },
+    {
+        "name": "Amass"
+    },
+    {
+        "name": "Android Free Forensic Toolkit"
+    },
+    {
+        "name": "Autopsy GUI"
+    },
+    {
+        "name": "Autotimeliner"
+    },
+    {
+        "name": "Bettercap"
+    },
+    {
+        "name": "BitTorrentForensics"
+    },
+    {
+        "name": "Bleachbit"
+    },
+    {
+        "name": "bundler"
+    },
+    {
+        "name": "Buster"
+    },
+    {
+        "name": "Carbon14"
+    },
+    {
+        "name": "Catfish Search"
+    },
+    {
+        "name": "Cewl"
+    },
+    {
+        "name": "cignotrack"
+    },
+    {
+        "name": "Cignotrack"
+    },
+    {
+        "name": "Ciphey"
+    },
+    {
+        "name": "ClamAV Antivirus"
+    },
+    {
+        "name": "clamtk"
+    },
+    {
+        "name": "CS-QuickTunnel"
+    },
+    {
+        "name": "CUPP"
+    },
+    {
+        "name": "DC3DD"
+    },
+    {
+        "name": "DCFLDD"
+    },
+    {
+        "name": "Discord"
+    },
+    {
+        "name": "dnslib"
+    },
+    {
+        "name": "Docker"
+    },
+    {
+        "name": "Docker"
+    },
+    {
+        "name": "Dradis"
+    },
+    {
+        "name": "Dump1090"
+    },
+    {
+        "name": "DumpsterDiver"
+    },
+    {
+        "name": "Email2phone"
+    },
+    {
+        "name": "EXIFTool"
+    },
+    {
+        "name": "EyeWitness"
+    },
+    {
+        "name": "FastCrackZip"
+    },
+    {
+        "name": "FBI - Facebook Information"
+    },
+    {
+        "name": "FFMpeg"
+    },
+    {
+        "name": "File Roller"
+    },
+    {
+        "name": "FileCompare - Forensics-Colorize"
+    },
+    {
+        "name": "FinalRecon"
+    },
+    {
+        "name": "Foremost"
+    },
+    {
+        "name": "Fred"
+    },
+    {
+        "name": "FreePlane - Mind Mapping"
+    },
+    {
+        "name": "Ghidra"
+    },
+    {
+        "name": "GIMP"
+    },
+    {
+        "name": "GitLeaks"
+    },
+    {
+        "name": "GNUPG"
+    },
+    {
+        "name": "GNURadio"
+    },
+    {
+        "name": "GoBuster"
+    },
+    {
+        "name": "Goohak"
+    },
+    {
+        "name": "GPA"
+    },
+    {
+        "name": "gqrx"
+    },
+    {
+        "name": "GUFW - UFW GUI"
+    },
+    {
+        "name": "Guymager"
+    },
+    {
+        "name": "H8mail"
+    },
+    {
+        "name": "Hashcat"
+    },
+    {
+        "name": "Heimdall"
+    },
+    {
+        "name": "HTOP"
+    },
+    {
+        "name": "HTTrack"
+    },
+    {
+        "name": "Hunchly Update"
+    },
+    {
+        "name": "icmplib"
+    },
+    {
+        "name": "IMSI-Catcher"
+    },
+    {
+        "name": "Infoga"
+    },
+    {
+        "name": "inotify-tools"
+    },
+    {
+        "name": "InSpy"
+    },
+    {
+        "name": "InstagramOSINT"
+    },
+    {
+        "name": "Instaloader"
+    },
+    {
+        "name": "iPhone Backup Decoder and Analyzer 2"
+    },
+    {
+        "name": "John the Riper GUI"
+    },
+    {
+        "name": "kalibrate"
+    },
+    {
+        "name": "KeePassXC"
+    },
+    {
+        "name": "Kismet"
+    },
+    {
+        "name": "Knock"
+    },
+    {
+        "name": "Kubernetes"
+    },
+    {
+        "name": "KVM"
+    },
+    {
+        "name": "LibMobileDevice"
+    },
+    {
+        "name": "LibreOffice"
+    },
+    {
+        "name": "Libvirt"
+    },
+    {
+        "name": "LittleBrother"
+    },
+    {
+        "name": "LMD"
+    },
+    {
+        "name": "LXD"
+    },
+    {
+        "name": "Lynis"
+    },
+    {
+        "name": "MagicRescue"
+    },
+    {
+        "name": "Maldet"
+    },
+    {
+        "name": "Maltego CE"
+    },
+    {
+        "name": "Maryam"
+    },
+    {
+        "name": "Medusa"
+    },
+    {
+        "name": "Metagoofil"
+    },
+    {
+        "name": "MISP on CSI SIEM"
+    },
+    {
+        "name": "Moriarty-Project"
+    },
+    {
+        "name": "NCrack"
+    },
+    {
+        "name": "NMap"
+    },
+    {
+        "name": "nodejs"
+    },
+    {
+        "name": "npm"
+    },
+    {
+        "name": "OnionSearch"
+    },
+    {
+        "name": "OnionShare"
+    },
+    {
+        "name": "OphCrack"
+    },
+    {
+        "name": "OSINT-Search"
+    },
+    {
+        "name": "OSINTFramework"
+    },
+    {
+        "name": "OSINTgram"
+    },
+    {
+        "name": "OSRFramework"
+    },
+    {
+        "name": "OutGuess"
+    },
+    {
+        "name": "passwordmeter"
+    },
+    {
+        "name": "PDFMeta"
+    },
+    {
+        "name": "PhoneInfoga"
+    },
+    {
+        "name": "Photon"
+    },
+    {
+        "name": "PhotoRec"
+    },
+    {
+        "name": "Pidgin - Off-The-Recod plugin"
+    },
+    {
+        "name": "PWNedOrNot"
+    },
+    {
+        "name": "pyngrok"
+    },
+    {
+        "name": "qTox"
+    },
+    {
+        "name": "Radare2"
+    },
+    {
+        "name": "rbenv"
+    },
+    {
+        "name": "Recon-NG"
+    },
+    {
+        "name": "RecordMyDesktop"
+    },
+    {
+        "name": "RecoverDM - Bad Sector Recovery"
+    },
+    {
+        "name": "RecoverMOV"
+    },
+    {
+        "name": "Recupera"
+    },
+    {
+        "name": "ReonDog"
+    },
+    {
+        "name": "RET"
+    },
+    {
+        "name": "RevoverJPEG"
+    },
+    {
+        "name": "Rock-On"
+    },
+    {
+        "name": "Rootkit Hunter"
+    },
+    {
+        "name": "RTL-SDR-Scanner"
+    },
+    {
+        "name": "RTL"
+    },
+    {
+        "name": "Ruby"
+    },
+    {
+        "name": "Scalpel"
+    },
+    {
+        "name": "Sherlock"
+    },
+    {
+        "name": "Signal"
+    },
+    {
+        "name": "Skiptracer"
+    },
+    {
+        "name": "Slack"
+    },
+    {
+        "name": "Spiderfoot"
+    },
+    {
+        "name": "SRDAngel"
+    },
+    {
+        "name": "StegHide"
+    },
+    {
+        "name": "StegoSuite"
+    },
+    {
+        "name": "StegSnow"
+    },
+    {
+        "name": "Storm-Breaker"
+    },
+    {
+        "name": "STRangelove"
+    },
+    {
+        "name": "Sublist3r"
+    },
+    {
+        "name": "Telegram"
+    },
+    {
+        "name": "TempestSDR"
+    },
+    {
+        "name": "theHarvester"
+    },
+    {
+        "name": "Thug"
+    },
+    {
+        "name": "TikTok Scraper"
+    },
+    {
+        "name": "TInfoleak"
+    },
+    {
+        "name": "TorBrowser"
+    },
+    {
+        "name": "Transmission Bittorrent"
+    },
+    {
+        "name": "twint"
+    },
+    {
+        "name": "UFW Firewall"
+    },
+    {
+        "name": "UPX"
+    },
+    {
+        "name": "Vinetto"
+    },
+    {
+        "name": "Viper"
+    },
+    {
+        "name": "VirtualBox"
+    },
+    {
+        "name": "VLC Player"
+    },
+    {
+        "name": "VMWare Player"
+    },
+    {
+        "name": "Volatility 3"
+    },
+    {
+        "name": "WebKiller"
+    },
+    {
+        "name": "Whatsam"
+    },
+    {
+        "name": "Whonix Gateway"
+    },
+    {
+        "name": "Wireshark"
+    },
+    {
+        "name": "wxroimg"
+    },
+    {
+        "name": "YouTube_DL"
+    },
+    {
+        "name": "Zulucrypt"
+    }
+]

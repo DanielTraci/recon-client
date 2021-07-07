@@ -18,7 +18,6 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 import CodeIcon from '@material-ui/icons/Code';
 import SearchIcon from '@material-ui/icons/Search';
-import CardMedia from '@material-ui/core/CardMedia';
 import Container from '@material-ui/core/Container'
 
 

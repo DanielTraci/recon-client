@@ -1,135 +1,233 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
-import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
-import SyncProblemIcon from '@material-ui/icons/SyncProblem';
-import FindInPageIcon from '@material-ui/icons/FindInPage';
-import Box from '@material-ui/core/Box';
-import { useEffect, useRef } from "react";
-import TypeWriterEffect from 'react-typewriter-effect';
-import Card from '@material-ui/core/Card';
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import Avatar from '@material-ui/core/Avatar';
-import CardActions from '@material-ui/core/CardActions';
-import { LinkedIn } from '@material-ui/icons';
-import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
-import MailIcon from '@material-ui/icons/Mail';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container'
-
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import SettingsApplicationsIcon from '@material-ui/icons/SettingsApplications';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import ReactPlayer from 'react-player/youtube'
+import Card from '@material-ui/core/Card';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import SearchIcon from '@material-ui/icons/Search';
+import FormControl from '@material-ui/core/FormControl';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-
+  accordion: {
+    width: 'auto',
+    background: "#2D2D2D"
+  },
+  header: {
+    position: "relative",
+    color: theme.palette.common.white,
+    marginBottom: theme.spacing(4),
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  },
+  headerContent: {
+    position: "relative",
+    padding: theme.spacing(4),
+    paddingTop: "80px"
+  },
+  cardProps: {
+    backgroundColor: "#2D2D2D",
+    maxWidth: 550,
+    marginTop: theme.spacing(14),
+    position: "relative"
+  },
+  input: {
+    color: "#FFFFFF"
+  },
+  button: {
+    marginBottom: theme.spacing(2)
+  },
+  searchBar: {
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#FFFFFF',
+        color: 'white'
+      },
+      '&:hover fieldset': {
+        borderColor: '#FFFFFF',
+      },
     },
-
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-    sectionOne: {
-        height: "600px",
-        backgroundImage: `url('./covers/largelogo.png')`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "320px",
-        position: "relative",
-
-        /* display: "flex",
-        direction: "row",
-        alignItems: "center", //wprks
-        justifyContent: "space-around" */
-
-    },
-    header: {
-        height: "400px",
-    },
-    titles: {
-        display: "flex",
-        justifyContent: "center",
-    },
-    animatedText: {
-        margin: "0px"
-    },
-    cardColor: {
-        backgroundColor: "#2D2D2D",
-    },
-    terminalIcons: {
-        margin: "0px",
-        padding: "0px",
-    },
-    iconsAlign: {
-        direction: "column",
-        justify: "center"
-    },
-
-    avatar: {
-        backgroundColor: "#C01F24",
-    },
-    cardPadding: {
-        paddingLeft: "70px",
-        paddingRight: "70px",
-
-    },
-
-    //------------------
-    header: {
-        position: "relative",
-        color: theme.palette.common.white,
-        marginBottom: theme.spacing(4),
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",                
-    },
-    headerContent: {
-        position: "relative",
-        padding: theme.spacing(9),
-
-    }
-
-
+    
+  },
 }));
 
-//className="header"   className={classes.sectionOne}
-export default function FullWidthGrid() {
-    const classes = useStyles();
-    /*   const theme = useTheme();
-      const isMobile = useMediaQuery(theme.breakpoints.down("xs")); */
 
-    return (
-        <div >
-            <Paper className={classes.header}>
-                <Container maxWidth>
-                    <Grid container>
-                        <Grid item md={6}>
+export default function Features(props) {
+  const classes = useStyles();
+  const { allFeatures, customFeatures, onSearch } = props
+  const { history } = props
+  const handleButtonClick = pageURL => {
+    history.push(pageURL);
+  };
 
-                        <div className={classes.headerContent} style={{backgroundImage:`url(./covers/largelogo.png)`}}>
-                           <Typography variant="h1" color="secondary" gutterBottom>
-                                    csi linuxxx
-                           </Typography>
+  return (
+    <div >
 
-                           <Typography variant="h5" color="secondary" paragraph>
-                                    csi linuxxxskdcsldkmclskmdclksmlkdmcslkmdclksmdcklmslkdsdksldksldksldksldkslmcs
-                           </Typography>
-                        </div>
-                        </Grid>
+      <Container maxWidth className={classes.header}>
+        <Grid container spacing={4}
+          direction="row"
+          justify="center"
+          alignItems="flex-start" >
 
-                    </Grid>
-                </Container>
-            </Paper>
+          {/* Header */}
+          <Grid item xs={12} sm={6} >
+            <div className={classes.headerContent}>
+              <Typography variant="h3" color="primary" gutterBottom>
+                Features
+              </Typography>
+              <Typography variant="h5" color="primary" paragraph>
+                "We've integrated over 175 tools in CSI Linux. It's a DFIR 'theme park' for the cyber security industry"
+              </Typography>
+              <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} className={classes.button} >Contact Us for suggestions</Button>
 
+              {/* Custom Features */}
+              <Accordion className={classes.accordion}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon color="primary" />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography color="primary" variant="h6">Custom features</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography variant="body2" color="primary">
+                    {
+                      customFeatures.map((feature, index) => {
+                        return (
+                          <List >
+                            <ListItem>
+                              <ListItemIcon>
+                                <SettingsApplicationsIcon color="error" />
+                              </ListItemIcon>
+                              <ListItemText
+                                primary={feature.name}
+                              />
+                            </ListItem>
+                          </List>
+                        )
+                      })
+                    }
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
 
-        </div>
-    );
+              {/* All tools */}
+              <Accordion className={classes.accordion}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon color="primary" />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography color="primary" variant="h6">All integrated tools</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Box>
+           <Typography color="primary">
+           Search for a specific tool...
+           </Typography>
+                  <TextField onChange={onSearch} className={classes.searchBar} id="outlined-basic" variant="outlined" fullWidth InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">
+                            <SearchIcon color="error"/>
+                          </InputAdornment>
+                        ), className: classes.input
+                      }}/> 
+                    <Typography variant="body2" color="primary">
+                      {
+                        allFeatures.map((feature, index) => {
+                          return (
+                            <List >
+                              <ListItem>
+                                <ListItemIcon>
+                                  <SettingsApplicationsIcon color="error" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={feature.name}
+                                />
+                              </ListItem>
+                            </List>
+                          )
+                        })
+                      }
+                    </Typography>
+
+                  </Box>
+                </AccordionDetails>
+              </Accordion>
+
+              {/* Licensed tools */}
+              <Accordion className={classes.accordion}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon color="primary" />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography color="primary" variant="h6">Licensed tools that you may need to purchase</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography variant="body" color="primary">
+                    <List >
+                      <ListItem>
+                        <ListItemIcon>
+                          <SettingsApplicationsIcon color="error" />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary="CSI Tools"
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <SettingsApplicationsIcon color="error" />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary="Hunchly 2"
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <SettingsApplicationsIcon color="error" />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary="Maltego"
+                        />
+                      </ListItem>
+                    </List>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          </Grid>
+
+          {/* Video */}
+          <Grid item xs={12} sm={6}>
+            <Card className={classes.cardProps}>
+              <CardActionArea>
+                <div className='player-wrapper'>
+                  <ReactPlayer controls className='react-player' width='100%'
+                    height='100%' url='https://www.youtube.com/watch?v=EvvN1xFJGvg' />
+                </div>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+    </div>
+  );
 }
-
-
-
-
