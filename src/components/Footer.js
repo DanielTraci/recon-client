@@ -58,11 +58,6 @@ export default function Footer() {
 
       </div>
 
-
     </div>
   );
 }
-
-
-{/*           <Link to="https://www.informationwarfarecenter.com/privacy-policy.html"><Typography color='primary' variant="body">Privacy Policy</Typography></Link>
-          <Link to="https://www.informationwarfarecenter.com/privacy-policy.html"><Typography color='primary' variant="body">Privacy Policy</Typography></Link> */}
