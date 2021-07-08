@@ -16,9 +16,6 @@ import Link from '@material-ui/core/Link';
 import TypeWriterEffect from 'react-typewriter-effect';
 import Button from '@material-ui/core/Button';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import Container from '@material-ui/core/Container'
-
-
 
 
 function TabPanel(props) {
@@ -54,12 +51,12 @@ function a11yProps(index) {
     };
 }
 
+
+// styling
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
     appbar: {
         backgroundColor: "#2D2D2D",
+        width: "100%"
     },
     terminal: {
         backgroundColor: "#2D2D2D",
@@ -74,31 +71,23 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     tabsText: {
-        color: "#FFFFFF"
+        color: "#FFFFFF",
     },
-
-    ///--------------
     header: {
         position: "relative",
-        color: theme.palette.common.white,
-        marginBottom: theme.spacing(4),
+        paddingBottom: theme.spacing(10),
+        paddingTop: theme.spacing(10),
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
     },
-    headerContent: {
-        position: "relative",
-        padding: theme.spacing(4),
-        paddingTop: "80px"
-    },
     cardProps: {
         backgroundColor: "#2D2D2D",
-        maxWidth: 550,
+        maxWidth: 560,
     },
-
 }));
 
-export default function SimpleTabs() {
+export default function Download() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
@@ -106,60 +95,55 @@ export default function SimpleTabs() {
         setValue(newValue);
     };
 
-
     return (
-        <div className={classes.root}>
+        <div>
+            <Grid container spacing={4}
+                direction="row"
+                justify="flex-start"
+                alignItems="flex-end"
+                className={classes.header}>
+                <Grid item xs={12} sm={6} >
+                    <div>
+                        <Typography variant="h3" color="primary" gutterBottom>
+                            Download CSI Linux
+                        </Typography>
+                        <Typography variant="h5" color="primary" >
+                            2021.2 has been released!
+                        </Typography>
+                        <Typography variant="h6" color="primary" paragraph>
+                            Default username: csi | Default password: csi
+                        </Typography>
 
-            {/* ---<div className={classes.sectionOne}>-------delete--------- */}
-
-
-            <Container maxWidth className={classes.header}>
-                <Grid container spacing={4}
-                        direction="row"
-                        justify="flex-start"
-                        alignItems="center" >
-                    <Grid item xs={12} sm={6} >
-                        <div className={classes.headerContent}>
-                            <Typography variant="h3" color="primary" gutterBottom>
-                                Download CSI Linux
-                            </Typography>
-                            <Typography variant="h5" color="primary" >
-                                2021.2 has been released!
-                            </Typography>
-                            <Typography variant="h6" color="primary" paragraph>
-                                Default username: csi | Default password: csi
-                            </Typography>
-
-                            <Typography variant="h5" color="primary" paragraph>
-                                Brief overview
-                            </Typography>
-                            <Typography variant="body" color="primary" paragraph>
-                                CSI Linux 2021.2 has many updated tools, features, and additions.
-                            </Typography>
-                            <Typography variant="body" color="primary" paragraph>
-                                When turned on, the CSI_TorVPN encapsulates all traffic through Tor similar to how Tails works. The CSI_Gateway app is now pointing to at a Whonix gateway VM. This gives you two different options when using the Virtual Appliance. If you are using the bootable version, you can only use the CSI_TorVPN.
-                            </Typography>
-                            <Typography variant="body" color="primary" paragraph>
-                                You can also add a VPN or Tor gateway to your network router for an external network layer of security.
-                            </Typography>
-                            <Typography variant="body" color="primary" paragraph>
-                                The CSI Linux SIEM has been separated and is now separate from CSI Linux. MISP, OTX, Malcolm, Moloch, Elasticsearch, Kibana, Logstash, Zeek, and others have been combined into this growing network monitoring and forensic server environment. This will be able to be downloaded onto CSI Linux or used on another system on the network.
-                            </Typography>
-                        </div>
-                    </Grid>
-
-                    <Grid item xs={12} sm={6} >
-                            <Card className={classes.cardProps}>
-                                <CardActionArea>
-                                    <div className='player-wrapper'>
-                                        <ReactPlayer controls className='react-player' width='100%'
-                                            height='100%' url='https://www.youtube.com/watch?v=EvvN1xFJGvg' />
-                                    </div>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
+                        <Typography variant="h5" color="primary" paragraph>
+                            Brief overview
+                        </Typography>
+                        <Typography variant="body" color="primary" paragraph>
+                            CSI Linux 2021.2 has many updated tools, features, and additions.
+                        </Typography>
+                        <Typography variant="body" color="primary" paragraph>
+                            When turned on, the CSI_TorVPN encapsulates all traffic through Tor similar to how Tails works. The CSI_Gateway app is now pointing to at a Whonix gateway VM. This gives you two different options when using the Virtual Appliance. If you are using the bootable version, you can only use the CSI_TorVPN.
+                        </Typography>
+                        <Typography variant="body" color="primary" paragraph>
+                            You can also add a VPN or Tor gateway to your network router for an external network layer of security.
+                        </Typography>
+                        <Typography variant="body" color="primary">
+                            The CSI Linux SIEM has been separated and is now separate from CSI Linux. MISP, OTX, Malcolm, Moloch, Elasticsearch, Kibana, Logstash, Zeek, and others have been combined into this growing network monitoring and forensic server environment. This will be able to be downloaded onto CSI Linux or used on another system on the network.
+                        </Typography>
+                    </div>
                 </Grid>
-            </Container>
+
+                <Grid item xs={12} sm={6} >
+                    <Card className={classes.cardProps}>
+                        <CardActionArea>
+                            <div className='player-wrapper'>
+                                <ReactPlayer controls className='react-player' width='100%'
+                                    height='100%' url='https://www.youtube.com/watch?v=EvvN1xFJGvg' />
+                            </div>
+                        </CardActionArea>
+                    </Card>
+                </Grid>
+            </Grid>
+
 
             {/* ------ </div>--delete----------- */}
 

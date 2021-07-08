@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
-import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -14,55 +13,52 @@ import Divider from '@material-ui/core/Divider';
 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    paddingTop: "100px",
-    height: "200px", 
-    paddingLeft: "8px",
-    paddingRight: "8px"
-  },
   divider: {
     backgroundColor: "#C01F24",
+    marginTop: theme.spacing(16),
   },
   footer: {
-    paddingTop: "50px",
-    paddingBottom: "50px",
+    paddingBottom: theme.spacing(6),
+    paddingTop: theme.spacing(6),
   }
-
 }));
 
-export default function FullWidthGrid() {
+export default function Footer() {
   const classes = useStyles();
-
-
   return (
-    <div className={classes.root}>
-      <Divider variant="middle" className={classes.divider} />
-      <Grid container spacing={3} className={classes.footer}>
-        <Grid item xs={12} container
-          direction="column"
-          justify="flex-start"
-          alignItems="center">
-          <Box>
-            <Typography color='primary' variant="h6">Follow us</Typography>
-          </Box>
-          <Box >
-            <Button href="https://www.facebook.com/csilinux"><FacebookIcon color="error" /></Button>
-            <Button href="https://www.linkedin.com/company/information-warfare-center/"><LinkedInIcon color="error" /></Button>
-            <Button href="https://github.com/Information-Warfare-Center/"><GitHubIcon color="error" /></Button>
-            <Button href="https://twitter.com/cyberintel "><TwitterIcon color="error" /></Button>
-            <Button href="https://www.youtube.com/c/CyberSecrets"><YouTubeIcon color="error" /></Button>
-          </Box>
-          <Box>
-          <Button href="https://www.informationwarfarecenter.com/"><Typography color='primary' variant="body">Information Warfare Center</Typography></Button>
-          <Typography color='primary' variant="body">|</Typography>
-          <Button href="https://www.informationwarfarecenter.com/privacy-policy.html"><Typography color='primary' variant="body">Privacy Policy</Typography></Button>
-          </Box>
-          <Box>
-          <Typography color='primary' variant="body">Copyright © CSI LINUX</Typography>
-          </Box>
-        </Grid>
-      </Grid>
+    <div>
+      <Divider variant="fullWidth" className={classes.divider} />
+
+
+      <div className={classes.footer}>
+        <Typography color='primary' variant="h6" align="center">Follow us</Typography>
+
+        <Box display="flex" justifyContent="center">
+          <Button href="https://www.facebook.com/csilinux"><FacebookIcon color="error" /></Button>
+          <Button href="https://www.linkedin.com/company/information-warfare-center/"><LinkedInIcon color="error" /></Button>
+          <Button href="https://github.com/Information-Warfare-Center/"><GitHubIcon color="error" /></Button>
+          <Button href="https://twitter.com/cyberintel "><TwitterIcon color="error" /></Button>
+          <Button href="https://www.youtube.com/c/CyberSecrets"><YouTubeIcon color="error" /></Button>
+        </Box>
+        <Box display="flex" justifyContent="center" flexDirection="column" >
+          <Typography variant="body2" color="primary" align="center">
+            <Link color="secondary" href="https://www.informationwarfarecenter.com/" >
+              Information Warfare Center
+            </Link>
+          </Typography>
+           <Typography variant="body2" color="primary" align="center">
+            <Link color="secondary" href="https://www.informationwarfarecenter.com/privacy-policy.html" >
+              Privacy Policy
+            </Link>
+          </Typography>
+        </Box>
+        <Box display="flex" justifyContent="center">
+          <Typography color='primary' variant="body" align="center">Copyright © CSI LINUX</Typography>
+        </Box>
+
+      </div>
+
+
     </div>
   );
 }

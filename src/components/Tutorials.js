@@ -53,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
         color: "#FFFFFF"
     },
     tabs: {
-        borderRight: `1px solid ${theme.palette.divider}`,
         minWidth: 165
     },
     cardProps: {
@@ -61,26 +60,11 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 300,
         minWidth: 300
     },
-    header: {
-        position: "relative",
-        color: theme.palette.common.white,
-        marginBottom: theme.spacing(4),
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-    },
-    headerContent: {
-        position: "relative",
-        padding: theme.spacing(4),
-        paddingTop: "80px"
-
-    }
 }));
 
-export default function VerticalTabs() {
+export default function Tutorials() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
-
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -105,12 +89,10 @@ export default function VerticalTabs() {
                     <Tab label="Mobile" {...a11yProps(5)} />
                 </Tabs>
 
-
                 {/* CSI Linux 2021.2 Walkthrough */}
                 <TabPanel value={value} index={0}>
-                    <Grid
-                        container
-                        spacing={4}
+                    <Grid spacing={4}
+                        container                        
                         direction="row"
                         justify="flex-start"
                         alignItems="flex-start"
@@ -141,7 +123,6 @@ export default function VerticalTabs() {
                         direction="row"
                         justify="flex-start"
                         alignItems="flex-start"
-
                     >
                         <Grid item xs={12} sm={6} md={4}>
                             <Card className={classes.cardProps}>

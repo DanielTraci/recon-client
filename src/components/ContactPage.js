@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
@@ -24,51 +23,33 @@ const CssTextField = withStyles({
 })(TextField);
 
 const useStyles = makeStyles((theme) => ({
-    paper: {
-        marginTop: theme.spacing(8),
+    elements: {
+        marginTop: theme.spacing(10),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        color: "#FFFFFF"
-
-    },
-    root: {
-        width: '100%',
-        marginTop: theme.spacing(1),
-        borderColor: 'red'
     },
     submit: {
-        margin: theme.spacing(3, 0, 2),
+        margin: theme.spacing(2, 0, 2),
     },
     input: {
         color: "#FFFFFF",
         borderColor: '#FFFFFF'
-    }
+    },
 }));
 
-function PrivacyPolicyDisclaimer() {
-    return (
-        <Typography variant="body2" color="primary" align="center">
-            By submitting your message, you are confirming that you agree with the <Link color="secondary" href="https://www.informationwarfarecenter.com/privacy-policy.html" >
-                Privacy Policy
-            </Link>
-        </Typography>
-    );
-}
-// <h1>As soon as we see your message, we will put our black hoodies on and we will get back to you</h1>
-function ContactForm(props) {
+function ContactPage(props) {
     const classes = useStyles();
     const { onSend, error } = props
 
     return (
         <div>
             <Container component="main" maxWidth="xs">
-                <CssBaseline />
-                <div className={classes.paper}>
+                <div className={classes.elements}>
                     <Typography variant="h3" color="primary">
                         Contact us
                     </Typography>
-                    <form onSubmit={onSend} className={classes.root} noValidate>
+                    <form onSubmit={onSend}>
                         <CssTextField required id="standard-basic" name="name" label="Your name" variant="outlined" fullWidth margin="normal" InputProps={{ className: classes.input }} />
                         <CssTextField required id="standard-basic" name="email" label="Your email" type="email" variant="outlined" fullWidth margin="normal" InputProps={{ className: classes.input }} />
                         <CssTextField required id="standard-basic" name="subject" label="Subject" variant="outlined" fullWidth margin="normal" InputProps={{ className: classes.input }} />
@@ -88,7 +69,12 @@ function ContactForm(props) {
                     </form>
                 </div>
                 <Box mt={2}>
-                    <PrivacyPolicyDisclaimer />
+                   
+                    <Typography variant="body2" color="primary" align="center">
+            By submitting your message, you confirm that you agree with the <Link color="secondary" href="https://www.informationwarfarecenter.com/privacy-policy.html" >
+                Privacy Policy
+            </Link>
+        </Typography>
                 </Box>
             </Container>
         </div>
@@ -96,4 +82,4 @@ function ContactForm(props) {
 
 }
 
-export default withRouter(ContactForm)
+export default withRouter(ContactPage)

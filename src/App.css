@@ -1,14 +1,4 @@
 
-/* .margin {
-  margin: 0 10px !important
-} */
-
-/* .navPadding {
-  padding: 50px;
-} */
-
-
-
 .animatedText {
   font-weight: 400;
   font-size: 1.5rem;
@@ -33,6 +23,8 @@
   text-decoration: none
 } */
 
+
+/* used styles */
 a:hover { 
   color: #C01F24
 }
@@ -48,15 +40,32 @@ a:hover {
   left: 0;
 }
 
+
+/* .appPadding gets called in the App.js in render method
+
+css applies if screen size is less than 768*/
 @media(max-width: 768px) {
-  .header {
-    font-size: 5px ;
+  .appPadding {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+/* css applies if the screen size is greater than 768*/
+@media(min-width: 768px) {
+  .appPadding {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
-
-/* used styles */
-
-.new {
-  color: '#333333' !important;
+/*scroll-bar(on the right) design*/
+::-webkit-scrollbar {
+  width: 12px
+}
+::-webkit-scrollbar-track {
+  background-color: #2D2D2D;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#1A1A1A, #1A1A1A);
+  border-radius: 4px;
 }

@@ -1,3 +1,5 @@
+//All website components(pages) are here in the return statement, where we created the routes//
+
 import React, { useState } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./App.css"
@@ -78,12 +80,14 @@ function App(props) {
         <Route path="/tutorials" component={Tutorials} />
         <Route path="/features" render={(routeProps) => {
           return <Features allFeatures={fileteredFeatures} customFeatures={customFeatures} onSearch={handleSearch} {...routeProps} />
+        //passing the data (all features and custom features) and the Search function to Features Component
         }} />
         <Route path="/team" component={Team} />
         <Route path="/contact" render={(routeProps) => {
           return <ContactPage error={error} onSend={handleSend} {...routeProps} />
+          //passing the Send function to ContactPage component so that the users can send messages
         }} />
-        <Route component={NotFound} />
+        <Route component={NotFound}/>
       </Switch>
       <Footer />
 

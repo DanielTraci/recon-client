@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = props => {
+const MenuAppBar = props => {
   const { history } = props;
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -94,7 +94,7 @@ const Header = props => {
                   <MenuItem onClick={() => handleMenuClick('/download')}>DOWNLOAD</MenuItem>
                   <MenuItem onClick={() => handleMenuClick('/tutorials')}>TUTORIALS</MenuItem>
                   <MenuItem onClick={() => handleMenuClick('/features')}>FEATURES</MenuItem>
-                  <MenuItem onClick={() => handleMenuClick('/team')}>TEAM</MenuItem>
+                  <MenuItem onClick={() => handleMenuClick('/team')}>TEAM</MenuItem>                  
                   <MenuItem onClick={() => handleMenuClick('/contact')}>CONTACT</MenuItem>
                 </Menu>
               </>
@@ -104,7 +104,9 @@ const Header = props => {
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/tutorials")}> TUTORIALS </Button>
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/features")}> FEATURES </Button>
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/team")}> TEAM </Button>
+                <Button size="large" color="primary" className={classes.margin} href="https://informationwarfarecenter.com/Cyber_Intelligence_Report.php">PUBLICATIONS</Button>
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/contact")}> CONTACT</Button>
+                
               </div>
             )
           }
@@ -115,4 +117,4 @@ const Header = props => {
   );
 }
 
-export default withRouter(Header)
+export default withRouter(MenuAppBar)
