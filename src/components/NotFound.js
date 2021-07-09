@@ -9,7 +9,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
-
 const useStyles = makeStyles((theme) => ({
   terminal: {
     backgroundColor: "#2D2D2D",
@@ -20,12 +19,12 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     position: "relative",
-    paddingBottom: theme.spacing(10),
-    paddingTop: theme.spacing(10),
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-  },
+},
 }));
 
 export default function NotFound() {
@@ -48,7 +47,7 @@ export default function NotFound() {
                   <FiberManualRecordIcon color="error" />,
                 ]}
               />
-              <Typography color='primary'><TypeWriterEffect text="~404 not found! Hold on, we need to put on a special purpose black hoodie to build this page. Got one? Contact us asap!" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={20} cursorColor="#FFFFFF" /></Typography>
+              <Typography color='primary'><TypeWriterEffect text="~404 not found! Hold on, we need to put on a special purpose black hoodie to build this page. We would appreciate your help!" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={20} cursorColor="#FFFFFF" /></Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -56,7 +55,3 @@ export default function NotFound() {
     </div>
   );
 }
-
-
-
-

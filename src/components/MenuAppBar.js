@@ -14,18 +14,14 @@ import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    
-  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   margin: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(2),
   },
   title: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   navBarFlex: {
     display: "flex",
@@ -47,7 +43,6 @@ const MenuAppBar = props => {
   const open = Boolean(anchorEl);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
-  //const preventDefault = (event) => event.preventDefault();
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -63,20 +58,20 @@ const MenuAppBar = props => {
   };
 
   return (
-    <div className={classes.root}>
+    <div>
       <AppBar position="fixed" className={classes.color} >
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/"><img src={logo} alt="csilinuxlogo" className={classes.logoDesktop} /></Link>
+            <Link to="/" className="csiLogo"><img src={logo} alt="csilinuxlogo" className={classes.logoDesktop} /></Link>
           </Typography>
           {
             isMobile ? (
               <>
                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"
                   onClick={handleMenu}>
-                  <MenuIcon />
+                  <MenuIcon color="primary"/>
                 </IconButton>
-                <Menu
+                <Menu 
                   id="menu-appbar"
                   anchorEl={anchorEl}
                   anchorOrigin={{
@@ -106,7 +101,6 @@ const MenuAppBar = props => {
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/team")}> TEAM </Button>
                 <Button size="large" color="primary" className={classes.margin} href="https://informationwarfarecenter.com/Cyber_Intelligence_Report.php">PUBLICATIONS</Button>
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/contact")}> CONTACT</Button>
-                
               </div>
             )
           }

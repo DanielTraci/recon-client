@@ -11,19 +11,18 @@ import SearchIcon from '@material-ui/icons/Search';
 import MailIcon from '@material-ui/icons/Mail';
 
 
-
 const useStyles = makeStyles((theme) => ({
-
-    cardColor: {
-        backgroundColor: "#2D2D2D",
-    },
     header: {
         position: "relative",
-        paddingBottom: theme.spacing(10),
-        paddingTop: theme.spacing(10),
+        marginTop: theme.spacing(10),
+        marginBottom: theme.spacing(10),
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+    },
+    cardColor: {
+        backgroundColor: "#2D2D2D",
+        borderColor: "#0000ff"
     },
 }));
 
@@ -40,13 +39,13 @@ export default function Team() {
                 </Typography>
             </Grid>
 
-            <Grid container spacing={6} justify="center">
+            <Grid container spacing={5} justify="center">
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.cardColor}>
+                    <Card className={classes.cardColor} variant="outlined">
                         <CardContent>
                             <Typography variant="h5" color="error"> Jeremy Martin </Typography>
                             <Typography variant="body2" color="primary" component="p">
-                                As a scum sucking contractor, Jeremy enjoys having fun reverse engineering code and building backdoors to get access to the most sensitive data. Being a Red Team SME and Sr. Cyber Investigator, he looks for a good time analyzing an organization's flaws and identifying their weaknesses.
+                                As a scum sucking contractor, Jeremy enjoys having fun reverse engineering code and building backdoors to get access to the most sensitive data. Being a Red Team SME and Sr. Cyber Investigator, he looks for a good time analyzing organizations' flaws and identifying their weaknesses.
                             </Typography>
                         </CardContent>
                         <CardActions disableSpacing>
@@ -58,7 +57,7 @@ export default function Team() {
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.cardColor}>
+                    <Card className={classes.cardColor} variant="outlined">
                         <CardContent>
                             <Typography variant="h5" color="error"> Richard Medlin </Typography>
                             <Typography variant="body2" color="primary" component="p">
@@ -74,7 +73,7 @@ export default function Team() {
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.cardColor}>
+                    <Card className={classes.cardColor} variant="outlined">
                         <CardContent>
                             <Typography variant="h5" color="error"> Matthew Swenson </Typography>
                             <Typography variant="body2" color="primary" component="p">
@@ -90,7 +89,7 @@ export default function Team() {
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.cardColor}>
+                    <Card className={classes.cardColor} variant="outlined">
                         <CardContent>
                             <Typography variant="h5" color="error">Nitin Sharma </Typography>
                             <Typography variant="body2" color="primary" component="p">
@@ -106,7 +105,7 @@ export default function Team() {
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.cardColor}>
+                    <Card className={classes.cardColor} variant="outlined">
                         <CardContent>
                             <Typography variant="h5" color="error">Christopher Perini </Typography>
                             <Typography variant="body2" color="primary" component="p">
@@ -122,7 +121,7 @@ export default function Team() {
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.cardColor}>
+                    <Card className={classes.cardColor} variant="outlined">
                         <CardContent>
                             <Typography variant="h5" color="error">Mark Martinez</Typography>
                             <Typography variant="body2" color="primary" component="p">
@@ -138,7 +137,7 @@ export default function Team() {
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.cardColor}>
+                    <Card className={classes.cardColor} variant="outlined">
                         <CardContent>
                             <Typography variant="h5" color="error">Daniel Traci</Typography>
                             <Typography variant="body2" color="primary" component="p">

@@ -1,34 +1,16 @@
-
-.animatedText {
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.167;
-  letter-spacing: 0em
-}
-
 .iconsXtext {
   display: flex;
 	flex-direction: column;
-	align-items: center;  
+	align-items: center; 
+  flex-wrap: wrap; 
 }
 
-.smIcons {
-  display: flex;
-	flex-direction: row;
-	align-items: center;  
-}
-
-/* a {
-  color: white;
-  text-decoration: none
-} */
-
-
-/* used styles */
 a:hover { 
   color: #C01F24
 }
 
+/* styles for youtube player that was installed
+https://www.npmjs.com/package/react-player*/
 .player-wrapper {
   position: relative;
   padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
@@ -40,25 +22,45 @@ a:hover {
   left: 0;
 }
 
-
-/* .appPadding gets called in the App.js in render method
-
-css applies if screen size is less than 768*/
+/* MOBILE - css applies if screen size is less than 768
+- .appMargins gets called in the App.js in render method
+*/
 @media(max-width: 768px) {
-  .appPadding {
-    padding-left: 20px;
-    padding-right: 20px;
+  .appMargins {
+    margin-left: 20px;
+    margin-right: 20px;
   }
-}
-/* css applies if the screen size is greater than 768*/
-@media(min-width: 768px) {
-  .appPadding {
-    padding-left: 100px;
-    padding-right: 100px;
+  /* works */
+  .tutorialsTabs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start; 
+    align-items: center;
+    align-content: stretch; 
   }
 }
 
-/*scroll-bar(on the right) design*/
+/* Desktop css applies if the screen size is greater than 768*/
+@media(min-width: 768px) {
+  .appMargins {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .tutorialsTabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    align-content: stretch;
+  }
+  .csiLogo {
+    margin-left: 77px;
+  }
+}
+
+/*scroll-bar design (on the right) */
 ::-webkit-scrollbar {
   width: 12px
 }

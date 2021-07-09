@@ -72,7 +72,7 @@ function App(props) {
   }
 
   return (
-    <div className="appPadding">
+    <div className="appMargins">
       <MenuAppBar />
       <Switch>
         <Route exact path="/" component={HomePage} />

@@ -21,17 +21,19 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
-  accordion: {
-    width: 'auto',
-    background: "#2D2D2D"
-  },
   header: {
     position: "relative",
-    paddingBottom: theme.spacing(10),
-    paddingTop: theme.spacing(10),
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
+  },
+  accordionRack: {
+    width: 'auto',
+    background: "#2D2D2D",
+    marginBottom: theme.spacing(1),
+    borderColor: "#C01F24"
   },
   cardProps: {
     backgroundColor: "#2D2D2D",
@@ -41,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF"
   },
   button: {
-    marginBottom: theme.spacing(2)
+    marginTop: theme.spacing(2)
   },
   searchBar: {
     '& .MuiOutlinedInput-root': {
@@ -105,9 +107,9 @@ export default function Features(props) {
         alignItems="center">
         <Grid item xs={12} sm={6}>
           {/* All tools */}
-          <Accordion className={classes.accordion}>
+          <Accordion className={classes.accordionRack} variant="outlined">
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon color="primary" />}
+              expandIcon={<ExpandMoreIcon color="secondary" />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
@@ -115,7 +117,7 @@ export default function Features(props) {
             </AccordionSummary>
             <AccordionDetails>
               <Box>
-                <Typography color="primary">
+                <Typography color="primary" variant="body">
                   Search for a specific tool...
                 </Typography>
                 <TextField onChange={onSearch} className={classes.searchBar} id="outlined-basic" variant="outlined" fullWidth InputProps={{
@@ -125,7 +127,7 @@ export default function Features(props) {
                     </InputAdornment>
                   ), className: classes.input
                 }} />
-                <Typography variant="body2" color="primary">
+                <Typography variant="body" color="primary">
                   {
                     allFeatures.map((feature, index) => {
                       return (
@@ -148,9 +150,9 @@ export default function Features(props) {
           </Accordion>
 
           {/* Custom Features */}
-          <Accordion className={classes.accordion}>
+          <Accordion className={classes.accordionRack} variant="outlined">
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon color="primary" />}
+              expandIcon={<ExpandMoreIcon color="secondary" />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
@@ -179,9 +181,9 @@ export default function Features(props) {
           </Accordion>
 
           {/* Licensed tools */}
-          <Accordion className={classes.accordion}>
+          <Accordion className={classes.accordionRack} variant="outlined">
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon color="primary" />}
+              expandIcon={<ExpandMoreIcon color="secondary"/>}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -50,15 +51,17 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         display: 'flex',
-        color: "#FFFFFF"
+        color: "#FFFFFF",        
     },
     tabs: {
-        minWidth: 165
+        minWidth: 160,
+        marginTop: theme.spacing(1)
     },
     cardProps: {
         backgroundColor: "#2D2D2D",
-        maxWidth: 300,
-        minWidth: 300
+        maxWidth: 280,  
+        minWidth: 177,
+        marginLeft: "-10px"
     },
 }));
 
@@ -70,7 +73,7 @@ export default function Tutorials() {
     };
 
     return (
-        <div>
+        <div className="tutorialsTabs">
 
             <div className={classes.root}>
                 <Tabs
@@ -97,7 +100,7 @@ export default function Tutorials() {
                         justify="flex-start"
                         alignItems="flex-start"
                     >
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item xs={12} >
                             <Card className={classes.cardProps}>
                                 <CardActionArea>
                                     <div className='player-wrapper'>
@@ -501,7 +504,7 @@ export default function Tutorials() {
                         justify="flex-start"
                         alignItems="flex-start"
                     >
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item xs={12}>
                             <Card className={classes.cardProps}>
                                 <CardActionArea>
                                     <div className='player-wrapper'>

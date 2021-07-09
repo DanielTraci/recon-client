@@ -69,12 +69,11 @@ function ContactPage(props) {
                     </form>
                 </div>
                 <Box mt={2}>
-                   
                     <Typography variant="body2" color="primary" align="center">
-            By submitting your message, you confirm that you agree with the <Link color="secondary" href="https://www.informationwarfarecenter.com/privacy-policy.html" >
-                Privacy Policy
-            </Link>
-        </Typography>
+                        By submitting your message, you confirm that you agree with the <Link color="secondary" href="https://www.informationwarfarecenter.com/privacy-policy.html" >
+                            Privacy Policy
+                        </Link>
+                    </Typography>
                 </Box>
             </Container>
         </div>
