@@ -61,7 +61,7 @@ const MenuAppBar = props => {
     <div>
       <AppBar position="fixed" className={classes.color} >
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+          <Typography className={classes.title}>
             <Link to="/" className="csiLogo"><img src={logo} alt="csilinuxlogo" className={classes.logoDesktop} /></Link>
           </Typography>
           {

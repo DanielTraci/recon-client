@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         display: 'flex',
-        color: "#FFFFFF",        
+        color: "#FFFFFF",
     },
     tabs: {
         minWidth: 160,
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     },
     cardProps: {
         backgroundColor: "#2D2D2D",
-        maxWidth: 280,  
+        maxWidth: 280,
         minWidth: 177,
         marginLeft: "-10px"
     },
@@ -95,7 +95,7 @@ export default function Tutorials() {
                 {/* CSI Linux 2021.2 Walkthrough */}
                 <TabPanel value={value} index={0}>
                     <Grid spacing={4}
-                        container                        
+                        container
                         direction="row"
                         justify="flex-start"
                         alignItems="flex-start"
@@ -139,7 +139,7 @@ export default function Tutorials() {
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2" color="primary">
-                                            CSI Linux Virtual Appliance <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Virtual%20Appliance.pdf" color="secondary">install document</Link>
+                                            CSI Linux Virtual Appliance <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Virtual%20Appliance.pdf" color="error">install document</Link>
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
@@ -158,7 +158,7 @@ export default function Tutorials() {
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2" color="primary">
-                                            CSI Linux Bootable Image <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Bootable%20Image.pdf" color="secondary">install document</Link>
+                                            CSI Linux Bootable Image <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Bootable%20Image.pdf" color="error">install document</Link>
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
@@ -225,7 +225,7 @@ export default function Tutorials() {
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2" color="primary">
-                                            <Link href="https://csilinux.com/Documents/CSI_Linux_Using_Tor.pdf" color="secondary">PDF Guide</Link> to setting up CSI Linux to use Tor
+                                            <Link href="https://csilinux.com/Documents/CSI_Linux_Using_Tor.pdf" color="error">PDF Guide</Link> to setting up CSI Linux to use Tor
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
@@ -273,7 +273,7 @@ export default function Tutorials() {
                                     </div>
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2" color="primary">
-                                            CSI Linux Case Management / <Link href="https://csilinux.com/Documents/CSI_Linux_Case_Management.pdf" color="secondary">PDF</Link>
+                                            CSI Linux Case Management / <Link href="https://csilinux.com/Documents/CSI_Linux_Case_Management.pdf" color="error">PDF</Link>
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
@@ -504,7 +504,23 @@ export default function Tutorials() {
                         justify="flex-start"
                         alignItems="flex-start"
                     >
-                        <Grid item xs={12}>
+                        <Grid item xs={12} sm={6} >
+                            <Card className={classes.cardProps}>
+                                <CardActionArea>
+                                    <div className='player-wrapper'>
+                                        <ReactPlayer controls className='react-player' width='100%'
+                                            height='100%' url='https://www.youtube.com/watch?v=-UuxFVCEw3c' />
+                                    </div>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2" color="primary">
+                                            Anbox - Android in a Box
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
+                        
+                        <Grid item xs={12} sm={6}>
                             <Card className={classes.cardProps}>
                                 <CardActionArea>
                                     <div className='player-wrapper'>

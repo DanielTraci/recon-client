@@ -12,6 +12,7 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 const useStyles = makeStyles((theme) => ({
   terminal: {
     backgroundColor: "#2D2D2D",
+    borderColor: "#C01F24"
   },
   terminalIcons: {
     margin: "0px",
@@ -38,7 +39,7 @@ export default function NotFound() {
         alignItems="center"
         className={classes.header}>
         <Grid item xs={12} sm={6}>
-          <Card className={classes.terminal}>
+          <Card className={classes.terminal} variant="outlined">
             <CardContent >
               <CardHeader className={classes.terminalIcons}
                 avatar={[

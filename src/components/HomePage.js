@@ -140,7 +140,7 @@ export default function HomePage(props) {
           --------------------------------------------------*/}
       <Grid container>
         <Grid item xs={12}>
-          <Typography color='primary' variant="h4" align="center" className={classes.sectionTitles} >4 DFIR CHALLENGES CSI LINUX SOLVES</Typography>
+          <Typography color='primary' variant="h4" align="center" className={classes.sectionTitles} >4 DFIR challenges CSI Linux solves</Typography>
         </Grid>
 
         {/* MINIMIZE THE TIME AND EFFORT */}
@@ -254,7 +254,24 @@ export default function HomePage(props) {
               </CardContent>
             </Card>
           </Grid>
-
+        </Grid>
+        
+        <Grid container spacing={4} className={classes.sectionTitles}
+          direction="row"
+          justifyContent="center"
+          alignItems="flex-start">
+          <Grid item xs={12} sm={8}>
+            <Box display="flex" justifyContent="center">
+              <Typography variant="h4" color="primary" align="center">
+                Contact us for business inquiries
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box display="flex" justifyContent="center">
+              <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} className={classes.button} >Get in touch with us</Button>
+            </Box>
+          </Grid>
         </Grid>
       </Grid>
     </div>

@@ -9,7 +9,8 @@ import { LinkedIn } from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import MailIcon from '@material-ui/icons/Mail';
-
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
     header: {
@@ -24,10 +25,19 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#2D2D2D",
         borderColor: "#0000ff"
     },
+    sectionTitles: {
+        display: "flex",
+        justifyContent: "center",
+        marginTop: theme.spacing(10),
+      },
 }));
 
-export default function Team() {
+export default function Team(props) {
     const classes = useStyles();
+    const { history } = props
+    const handleButtonClick = pageURL => {
+        history.push(pageURL);
+    };
     return (
         <div>
             <Grid item xs={12} className={classes.header}>
@@ -150,6 +160,24 @@ export default function Team() {
                             </IconButton>
                         </CardActions>
                     </Card>
+                </Grid>
+            </Grid>
+
+            <Grid container spacing={4} className={classes.sectionTitles}
+                direction="row"
+                justifyContent="center"
+                alignItems="flex-start">
+                <Grid item xs={12} sm={8}>
+                    <Box display="flex" justifyContent="center">
+                        <Typography variant="h4" color="primary" align="center">
+                            Contact us for business inquiries
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box display="flex" justifyContent="center">
+                        <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} className={classes.button} >Get in touch with us</Button>
+                    </Box>
                 </Grid>
             </Grid>
         </div>

@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     width: 'auto',
     background: "#2D2D2D",
     marginBottom: theme.spacing(1),
-    borderColor: "#C01F24"
+    borderColor: "#0000ff"
   },
   cardProps: {
     backgroundColor: "#2D2D2D",
@@ -83,7 +83,7 @@ export default function Features(props) {
           <Typography variant="h5" color="primary" paragraph>
             "We've integrated over 175 tools in CSI Linux. It's a DFIR 'theme park' for the cyber security industry"
           </Typography>
-          <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} className={classes.button} >Contact Us for suggestions</Button>
+          <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} className={classes.button} >Send your feedback</Button>
         </Grid>
 
         {/* Video */}

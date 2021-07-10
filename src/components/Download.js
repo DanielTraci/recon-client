@@ -58,10 +58,13 @@ const useStyles = makeStyles((theme) => ({
     header: {
         position: "relative",
         marginTop: theme.spacing(10),
-        marginBottom: theme.spacing(10),
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+    },
+    subheader: {
+        marginTop: theme.spacing(10),
+        marginBottom: theme.spacing(10),
     },
     appbar: {
         backgroundColor: "#2D2D2D",
@@ -73,13 +76,16 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         marginBottom: theme.spacing(5),
     },
+    supportCSI: {
+        marginTop: theme.spacing(5),
+    },
     contentMargins: {
         marginBottom: theme.spacing(5),
     },
     terminal: {
         backgroundColor: "#2D2D2D",
         marginTop: theme.spacing(1),
-        borderColor: "#0000ff"
+        borderColor: "#C01F24"
     },
     terminalIcons: {
         margin: "0px",
@@ -89,26 +95,28 @@ const useStyles = makeStyles((theme) => ({
         '& > *': {
             margin: theme.spacing(1),
             marginTop: theme.spacing(5),
-            marginBottom: theme.spacing(3)
         },
     },
     tabsText: {
         color: "#FFFFFF",
     },
-
     cardProps: {
         backgroundColor: "#2D2D2D",
         maxWidth: 560,
     },
 }));
 
-export default function Download() {
+export default function Download(props) {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
-
+    const { history } = props
+    const handleButtonClick = pageURL => {
+        history.push(pageURL);
+    };
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
 
     return (
         <div>
@@ -128,12 +136,11 @@ export default function Download() {
                         <Typography variant="h6" color="primary" paragraph>
                             Default username: csi | Default password: csi
                         </Typography>
-
                         <Typography variant="h5" color="primary" paragraph>
                             Brief overview
                         </Typography>
                         <Typography variant="body" color="primary" paragraph>
-                            CSI Linux 2021.2 has many updated tools, features, and additions.
+                            CSI Linux 2021.2 has many updated tools, features, and additions. To install CSI Linux Tools updates type "powerup" in the terminal window and press enter.
                         </Typography>
                         <Typography variant="body" color="primary" paragraph>
                             When turned on, the CSI_TorVPN encapsulates all traffic through Tor similar to how Tails works. The CSI_Gateway app is now pointing to at a Whonix gateway VM. This gives you two different options when using the Virtual Appliance. If you are using the bootable version, you can only use the CSI_TorVPN.
@@ -159,6 +166,24 @@ export default function Download() {
                 </Grid>
             </Grid>
 
+            <Grid container spacing={4} className={classes.subheader}
+                direction="row"
+                justifyContent="center"
+                alignItems="flex-start">
+                <Grid item xs={12} sm={8}>
+                    <Box display="flex" justifyContent="center">
+                        <Typography variant="h4" color="primary" align="center">
+                            Contact us for business inquiries
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box display="flex" justifyContent="center">
+                        <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} >Get in touch with us</Button>
+                    </Box>
+                </Grid>
+            </Grid>
+
             <div >
                 <AppBar position="static" className={classes.appbar}>
                     <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
@@ -180,7 +205,7 @@ export default function Download() {
                         <Grid container spacing={4} className={classes.contentMargins}>
                             <Grid item xs={12} sm={6}>
                                 <Box>
-                                    <Typography color='primary' variant="h6" >CSI Linux 2021.2 (last version) has been packaged in a Virtual Appliance OVA. You must install <Link href="https://www.virtualbox.org/wiki/Downloads" color="secondary"> VirtualBox</Link> first, install the VirtualBox Extension Pack, then run the downloaded OVA file. This will take some time to build. Installation document can be found <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Virtual%20Appliance.pdf" color="secondary">here</Link>.
+                                    <Typography color='primary' variant="h6" >CSI Linux 2021.2 (last version) has been packaged in a Virtual Appliance OVA. You must install <Link href="https://www.virtualbox.org/wiki/Downloads" color="error"> VirtualBox</Link> first, install the VirtualBox Extension Pack, then run the downloaded OVA file. This will take some time to build. Installation document can be found <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Virtual%20Appliance.pdf" color="error">here</Link>.
                                     </Typography>
                                 </Box>
                             </Grid>
@@ -218,6 +243,24 @@ export default function Download() {
                             <Button variant="outlined" color="primary" href="https://www.dropbox.com/s/ua0dgwc7l86r7jf/CSI%20Linux%202021.2.ova?dl=0">DROPBOX</Button>
                             <Button variant="outlined" color="primary" href="https://csilinux.com/downloads/CSI%20Linux%202021.2.ova">Direct Download</Button>
                         </Grid>
+
+                        <Grid container spacing={4} className={classes.supportCSI}
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="flex-start">
+                            <Grid item xs={12} sm={7}>
+                                <Box display="flex" justifyContent="center">
+                                    <Typography variant="h4" color="primary" align="center">
+                                        Support CSI Linux project
+                                    </Typography>
+                                </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={5}>
+                                <Box display="flex" justifyContent="center">
+                                    <Button variant="outlined" size="large" color="primary" href="https://csilinux.creator-spring.com/">FEATURED PRODUCTS</Button>
+                                </Box>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </TabPanel>
 
@@ -230,7 +273,7 @@ export default function Download() {
                         <Grid container spacing={4} className={classes.contentMargins}>
                             <Grid item xs={12} sm={6}>
                                 <Box>
-                                    <Typography color='primary' variant="h6" >CSI Linux 2021.2 (last version) has been packaged as a forensic RAW (.dd) copy and HDDRawCopy to use so you can make a bootable drive. This will take some time to build. This is NOT a .ISO file. It is a forensic copy in DD format. Read the <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Bootable%20Image.pdf" color="secondary">instructions</Link> before you download.
+                                    <Typography color='primary' variant="h6" >CSI Linux 2021.2 (last version) has been packaged as a forensic RAW (.dd) copy and HDDRawCopy to use so you can make a bootable drive. This will take some time to build. This is NOT a .ISO file. It is a forensic copy in DD format. Read the <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Bootable%20Image.pdf" color="error">instructions</Link> before you download.
                                     </Typography>
                                 </Box>
                             </Grid>
@@ -267,23 +310,23 @@ export default function Download() {
                             <Button variant="outlined" color="primary" href="https://csilinux.com/downloads/CSI_Linux_2021.2_Bootable.7z">Direct Download</Button>
                         </Grid>
 
-                        <Grid
-                            container
+                        <Grid container spacing={4} className={classes.supportCSI}
                             direction="row"
-                            justify="center"
-                            alignItems="center"
-                        >
-                            <Grid item xs={12} sm={6} >
-                                <Card className={classes.cardProps}>
-                                    <CardActionArea>
-                                        <div className='player-wrapper'>
-                                            <ReactPlayer controls className='react-player' width='100%'
-                                                height='100%' url='https://www.youtube.com/watch?v=uFDvxlnFE6w' />
-                                        </div>
-                                    </CardActionArea>
-                                </Card>
+                            justifyContent="center"
+                            alignItems="flex-start">
+                            <Grid item xs={12} sm={7}>
+                                <Box display="flex" justifyContent="center">
+                                    <Typography variant="h4" color="primary" align="center">
+                                        Support CSI Linux project
+                                    </Typography>
+                                </Box>
                             </Grid>
-                        </Grid>
+                            <Grid item xs={12} sm={5}>
+                                <Box display="flex" justifyContent="center">
+                                    <Button variant="outlined" size="large" color="primary" href="https://csilinux.creator-spring.com/">FEATURED PRODUCTS</Button>
+                                </Box>
+                            </Grid>
+                        </Grid>                        
                     </Grid>
                 </TabPanel>
 
@@ -297,7 +340,7 @@ export default function Download() {
                         <Grid container spacing={4} className={classes.contentMargins}>
                             <Grid item xs={12} sm={6}>
                                 <Box>
-                                    <Typography color='primary' variant="h6" >CSI Linux 2021.1 should be able to be installed on CSI Linux or on any other system on the network. CSI SIEM has been separated to allow you to engineer your environment anyway you want. The instructions are <Link href="https://github.com/Information-Warfare-Center/CSI-SIEM/blob/master/README.md" color="secondary">here</Link>.
+                                    <Typography color='primary' variant="h6" >CSI Linux 2021.1 should be able to be installed on CSI Linux or on any other system on the network. CSI SIEM has been separated to allow you to engineer your environment anyway you want. The instructions are <Link href="https://github.com/Information-Warfare-Center/CSI-SIEM/blob/master/README.md" color="error">here</Link>.
                                     </Typography>
                                 </Box>
                             </Grid>
@@ -326,6 +369,23 @@ export default function Download() {
                             justify="center"
                             alignItems="center">
                             <Button variant="outlined" color="primary" href="https://github.com/Information-Warfare-Center/CSI-SIEM">Github</Button>
+                        </Grid>
+                        <Grid container spacing={4} className={classes.supportCSI}
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="flex-start">
+                            <Grid item xs={12} sm={7}>
+                                <Box display="flex" justifyContent="center">
+                                    <Typography variant="h4" color="primary" align="center">
+                                        Support CSI Linux project
+                                    </Typography>
+                                </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={5}>
+                                <Box display="flex" justifyContent="center">
+                                    <Button variant="outlined" size="large" color="primary" href="https://csilinux.creator-spring.com/">FEATURED PRODUCTS</Button>
+                                </Box>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </TabPanel>

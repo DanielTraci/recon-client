@@ -6,7 +6,7 @@
 }
 
 a:hover { 
-  color: #C01F24
+  color: #0000ff
 }
 
 /* styles for youtube player that was installed
@@ -39,6 +39,9 @@ https://www.npmjs.com/package/react-player*/
     align-items: center;
     align-content: stretch; 
   }
+  columnSpacing {
+    margin-bottom: 100px;
+  }
 }
 
 /* Desktop css applies if the screen size is greater than 768*/
@@ -57,6 +60,9 @@ https://www.npmjs.com/package/react-player*/
   }
   .csiLogo {
     margin-left: 77px;
+  }
+  columnSpacing {
+    margin-bottom: 400px;
   }
 }
 
