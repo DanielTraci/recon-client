@@ -132,10 +132,9 @@ export default function Tutorials() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        alt="Contemplative Reptile"
+                                        alt="CSI LINUX - TUTORIAL"
                                         height="137"
                                         image="./covers/logoCover.png"
-                                        title="Contemplative Reptile"
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2" color="primary">
@@ -151,10 +150,9 @@ export default function Tutorials() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        alt="Contemplative Reptile"
+                                        alt="CSI LINUX - TUTORIAL"
                                         height="137"
-                                        image="./covers/logoCover.png"
-                                        title="Contemplative Reptile"
+                                        image="./covers/logoCover.png"                                    
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2" color="primary">
@@ -218,10 +216,9 @@ export default function Tutorials() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        alt="Contemplative Reptile"
+                                        alt="CSI LINUX - TUTORIAL"
                                         height="137"
                                         image="./covers/logoCover.png"
-                                        title="Contemplative Reptile"
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2" color="primary">

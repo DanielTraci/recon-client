@@ -15,6 +15,7 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 import CodeIcon from '@material-ui/icons/Code';
 import SearchIcon from '@material-ui/icons/Search';
+import clsx from 'clsx'
 
 //styling
 //the page has three sections with content - header, sectionTwo, sectionThree
@@ -44,6 +45,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px",
     padding: "0px",
   },
+  sectionTwoIcons: {
+    marginBottom: theme.spacing(4),
+  },
+  textXiconSpacing: {
+    marginTop: theme.spacing(2),
+  }
 }));
 
 
@@ -120,17 +127,17 @@ export default function HomePage(props) {
             direction="column"
             justify="space-evenly"
             alignItems="center">
-            <Box className="iconsXtext">
+            <Box className={clsx("iconsXtext", classes.sectionTwoIcons)}>
               <FindInPageIcon color="error" style={{ fontSize: 50 }} />
-              <Typography color='primary' variant="h6" >ONLINE INVESTIGATIONS</Typography>
+              <Typography color='primary' variant="h6" className={classes.textXiconSpacing}>ONLINE INVESTIGATIONS</Typography>
             </Box>
-            <Box className="iconsXtext">
+            <Box className={clsx("iconsXtext", classes.sectionTwoIcons)}>
               <SyncProblemIcon color="error" style={{ fontSize: 50 }} />
-              <Typography color='primary' variant="h6" >INCIDENT RESPONSE</Typography>
+              <Typography color='primary' variant="h6" className={classes.textXiconSpacing}>INCIDENT RESPONSE</Typography>
             </Box>
             <Box className="iconsXtext">
               <DeveloperModeIcon color="error" style={{ fontSize: 50 }} />
-              <Typography color='primary' variant="h6" >MALWARE ANALYSIS</Typography>
+              <Typography color='primary' variant="h6" className={classes.textXiconSpacing}>MALWARE ANALYSIS</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -152,7 +159,7 @@ export default function HomePage(props) {
           >
             <Box className="iconsXtext">
               <QueryBuilderIcon color="error" style={{ fontSize: 100 }} />
-              <Typography color='primary' variant="h5" align="center">MINIMIZE THE TIME AND EFFORT</Typography>
+              <Typography color='primary' variant="h5" align="center" className={classes.textXiconSpacing}>MINIMIZE THE TIME AND EFFORT</Typography>
             </Box>
           </Grid>
 
@@ -180,7 +187,7 @@ export default function HomePage(props) {
             alignItems="center">
             <Box className="iconsXtext">
               <FindInPageIcon color="error" style={{ fontSize: 100 }} />
-              <Typography color='primary' variant="h5" align="center">CYBER CRIME CASE</Typography>
+              <Typography color='primary' variant="h5" align="center" className={classes.textXiconSpacing}>CYBER CRIME CASE</Typography>
             </Box>
           </Grid>
 
@@ -208,7 +215,7 @@ export default function HomePage(props) {
             alignItems="center">
             <Box className="iconsXtext">
               <CodeIcon color="error" style={{ fontSize: 100 }} />
-              <Typography color='primary' variant="h5" align="center">MALWARE ANALYSIS</Typography>
+              <Typography color='primary' variant="h5" align="center" className={classes.textXiconSpacing}>MALWARE ANALYSIS</Typography>
             </Box>
           </Grid>
 
@@ -236,7 +243,7 @@ export default function HomePage(props) {
             alignItems="center">
             <Box className="iconsXtext" >
               <SearchIcon color="error" style={{ fontSize: 100 }} />
-              <Typography color='primary' variant="h5" align="center">FORENSICS</Typography>
+              <Typography color='primary' variant="h5" align="center" className={classes.textXiconSpacing}>FORENSICS</Typography>
             </Box>
           </Grid>
 

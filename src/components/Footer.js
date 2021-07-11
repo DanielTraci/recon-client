@@ -11,8 +11,11 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import iwclogo from './iwclogo.png'
-import { Link as RouterLink } from "react-router-dom"
 import IconButton from '@material-ui/core/IconButton';
+import { Link as RouterLink } from "react-router-dom" 
+//importing Link as an alias (RouterLink) because Material-UI(MUI) is using "Link" on line 3, 
+//if MUI didn't use it, we could have do --> import Link from "react-router-dom" 
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -67,7 +70,7 @@ export default function Footer(props) {
 
         <Grid item xs={12} sm={6} md={4} className={classes.columnSpacing}>
           <Box display="flex" justifyContent="center">
-            <Typography color='error' variant="body">Follow us</Typography>
+            <Typography color='error' variant="body1">Follow us</Typography>
           </Box>
           <Box display="flex" justifyContent="center">
 
@@ -90,7 +93,7 @@ export default function Footer(props) {
 
           <Box display="flex" justifyContent="center" flexDirection="column" >
             <Typography variant="body2" align="center">
-              <Link color="error" href="https://www.informationwarfarecenter.com/" >
+              <Link color="error" href="https://comms.informationwarfarecenter.com/?p=subscribe&id=1" >
                 Subscribe to publications
               </Link>
             </Typography>
@@ -122,7 +125,7 @@ export default function Footer(props) {
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center" >
-            <Typography color='error' variant="body" align="center">Copyright © CSI LINUX</Typography>
+            <Typography color='error' variant="body1" align="center">Copyright © CSI LINUX</Typography>
           </Box>
         </Grid>
       </Grid>

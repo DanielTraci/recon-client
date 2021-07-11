@@ -139,16 +139,16 @@ export default function Download(props) {
                         <Typography variant="h5" color="primary" paragraph>
                             Brief overview
                         </Typography>
-                        <Typography variant="body" color="primary" paragraph>
+                        <Typography variant="body1" color="primary" paragraph>
                             CSI Linux 2021.2 has many updated tools, features, and additions. To install CSI Linux Tools updates type "powerup" in the terminal window and press enter.
                         </Typography>
-                        <Typography variant="body" color="primary" paragraph>
+                        <Typography variant="body1" color="primary" paragraph>
                             When turned on, the CSI_TorVPN encapsulates all traffic through Tor similar to how Tails works. The CSI_Gateway app is now pointing to at a Whonix gateway VM. This gives you two different options when using the Virtual Appliance. If you are using the bootable version, you can only use the CSI_TorVPN.
                         </Typography>
-                        <Typography variant="body" color="primary" paragraph>
+                        <Typography variant="body1" color="primary" paragraph>
                             You can also add a VPN or Tor gateway to your network router for an external network layer of security.
                         </Typography>
-                        <Typography variant="body" color="primary">
+                        <Typography variant="body1" color="primary">
                             The CSI Linux SIEM has been separated and is now separate from CSI Linux. MISP, OTX, Malcolm, Moloch, Elasticsearch, Kibana, Logstash, Zeek, and others have been combined into this growing network monitoring and forensic server environment. This will be able to be downloaded onto CSI Linux or used on another system on the network.
                         </Typography>
                     </div>
@@ -169,17 +169,17 @@ export default function Download(props) {
             <Grid container spacing={4} className={classes.subheader}
                 direction="row"
                 justifyContent="center"
-                alignItems="flex-start">
+                alignItems="center">
                 <Grid item xs={12} sm={8}>
-                    <Box display="flex" justifyContent="center">
-                        <Typography variant="h4" color="primary" align="center">
-                            Contact us for business inquiries
+                    <Box display="flex" justifyContent="center" >
+                        <Typography variant="h4" color="primary" >
+                        Subscribe to our publications and news
                         </Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <Box display="flex" justifyContent="center">
-                        <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} >Get in touch with us</Button>
+                    <Box display="flex" justifyContent="center">                        
+                        <Button variant="outlined" size="large" color="primary" href="https://comms.informationwarfarecenter.com/?p=subscribe&id=1">Subscribe to newsletter</Button>
                     </Box>
                 </Grid>
             </Grid>

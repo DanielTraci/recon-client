@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
   },
+  subheader: {
+    marginBottom: theme.spacing(10),
+},
   accordionRack: {
     width: 'auto',
     background: "#2D2D2D",
@@ -99,6 +102,24 @@ export default function Features(props) {
         </Grid>
       </Grid>
 
+      <Grid container spacing={4} className={classes.subheader}
+                direction="row"
+                justifyContent="center"
+                alignItems="center">
+                <Grid item xs={12} sm={8}>
+                    <Box display="flex" justifyContent="center" >
+                        <Typography variant="h4" color="primary" >
+                        Get the latest news about CSI Linux products
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box display="flex" justifyContent="center">                        
+                        <Button variant="outlined" size="large" color="primary" href="https://comms.informationwarfarecenter.com/?p=subscribe&id=1">Subscribe to newsletter</Button>
+                    </Box>
+                </Grid>
+            </Grid>
+
       {/* Tools accordion */}
       <Grid
         container
@@ -117,7 +138,7 @@ export default function Features(props) {
             </AccordionSummary>
             <AccordionDetails>
               <Box>
-                <Typography color="primary" variant="body">
+                <Typography color="primary" variant="body1">
                   Search for a specific tool...
                 </Typography>
                 <TextField onChange={onSearch} className={classes.searchBar} id="outlined-basic" variant="outlined" fullWidth InputProps={{
@@ -127,11 +148,11 @@ export default function Features(props) {
                     </InputAdornment>
                   ), className: classes.input
                 }} />
-                <Typography variant="body" color="primary">
+                <Typography variant="body1" color="primary">
                   {
                     allFeatures.map((feature, index) => {
                       return (
-                        <List >
+                        <List key={index}>
                           <ListItem >
                             <ListItemIcon>
                               <SettingsApplicationsIcon color="error" />
@@ -163,7 +184,7 @@ export default function Features(props) {
                 {
                   customFeatures.map((feature, index) => {
                     return (
-                      <List >
+                      <List key={index}>
                         <ListItem >
                           <ListItemIcon>
                             <SettingsApplicationsIcon color="error" />
@@ -183,14 +204,14 @@ export default function Features(props) {
           {/* Licensed tools */}
           <Accordion className={classes.accordionRack} variant="outlined">
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon color="secondary"/>}
+              expandIcon={<ExpandMoreIcon color="secondary" />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
               <Typography color="primary" variant="h6">Licensed tools that you may need to purchase</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="body" color="primary">
+              <Typography variant="body1" color="primary">
                 <List >
                   <ListItem>
                     <ListItemIcon>

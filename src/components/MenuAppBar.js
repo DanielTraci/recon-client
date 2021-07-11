@@ -7,10 +7,12 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter, Link as RouterLink } from 'react-router-dom';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import logo from './logoW.png'
 import Button from '@material-ui/core/Button';
+import clsx from 'clsx'
+import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   margin: {
-    margin: theme.spacing(2),
+    marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
@@ -27,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flex: 1,
     justifyContent: "space-around",
+    marginRight: theme.spacing(6),
   },
   logoDesktop: {
     maxWidth: 50,
@@ -62,7 +65,7 @@ const MenuAppBar = props => {
       <AppBar position="fixed" className={classes.color} >
         <Toolbar>
           <Typography className={classes.title}>
-            <Link to="/" className="csiLogo"><img src={logo} alt="csilinuxlogo" className={classes.logoDesktop} /></Link>
+            <RouterLink to="/" className="csiLogo"><img src={logo} alt="csilinuxlogo" className={classes.logoDesktop} /></RouterLink>
           </Typography>
           {
             isMobile ? (
@@ -86,11 +89,12 @@ const MenuAppBar = props => {
                   open={open}
                   onClose={() => setAnchorEl(null)}
                 >
-                  <MenuItem onClick={() => handleMenuClick('/download')}>DOWNLOAD</MenuItem>
-                  <MenuItem onClick={() => handleMenuClick('/tutorials')}>TUTORIALS</MenuItem>
-                  <MenuItem onClick={() => handleMenuClick('/features')}>FEATURES</MenuItem>
-                  <MenuItem onClick={() => handleMenuClick('/team')}>TEAM</MenuItem>                  
-                  <MenuItem onClick={() => handleMenuClick('/contact')}>CONTACT</MenuItem>
+                  <MenuItem onClick={() => handleMenuClick('/download')}><Typography color="error">DOWNLOAD</Typography></MenuItem>
+                  <MenuItem onClick={() => handleMenuClick('/tutorials')}><Typography color="error">TUTORIALS</Typography></MenuItem>
+                  <MenuItem onClick={() => handleMenuClick('/features')}><Typography color="error">FEATURES</Typography></MenuItem>
+                  <MenuItem onClick={() => handleMenuClick('/team')}><Typography color="error">TEAM</Typography></MenuItem>
+                  <MenuItem><Link href="https://informationwarfarecenter.com/Cyber_Intelligence_Report.php"><Typography color="error">PUBLICATIONS</Typography></Link></MenuItem>                   
+                  <MenuItem onClick={() => handleMenuClick('/contact')}><Typography color="error">CONTACT</Typography></MenuItem>
                 </Menu>
               </>
             ) : (
@@ -99,7 +103,7 @@ const MenuAppBar = props => {
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/tutorials")}> TUTORIALS </Button>
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/features")}> FEATURES </Button>
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/team")}> TEAM </Button>
-                <Button size="large" color="primary" className={classes.margin} href="https://informationwarfarecenter.com/Cyber_Intelligence_Report.php">PUBLICATIONS</Button>
+                <Button size="large" color="primary"  className={clsx("navBarPublicationsLink", classes.margin)} href="https://informationwarfarecenter.com/Cyber_Intelligence_Report.php">PUBLICATIONS</Button>
                 <Button size="large" color="primary" className={classes.margin} onClick={() => handleButtonClick("/contact")}> CONTACT</Button>
               </div>
             )
