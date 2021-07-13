@@ -1,10 +1,14 @@
 body {
   margin: 0;
-  font-family: "Consolas";
+  font-family: -apple-system, BlinkMacSystemFont, 'Consolas', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 }
 
 code {
-  font-family: "Consolas"
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
-

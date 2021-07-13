@@ -1,5 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
+const font =  "'Inconsolata', monospace";
+
 const theme = createMuiTheme({
   overrides: {
     //background color
@@ -38,9 +40,14 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: "Consolas"
+    fontFamily: font,
   },
 
 });
 
 export default theme
+
+
+/*   typography: {
+    fontFamily: "Arial"
+  }, */

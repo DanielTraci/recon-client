@@ -1,6 +1,4 @@
-body {
-  font-family: "Consolas"!important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
 /* MOBILE - css applies if screen size is less than 768
 - .appMargins gets called in the App.js in render method
