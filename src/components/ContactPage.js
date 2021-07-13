@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
@@ -68,6 +69,11 @@ const useStyles = makeStyles((theme) => ({
 function ContactPage(props) {
     const classes = useStyles();
     const { onSend } = props
+
+    //goes to the top of the page
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -69,6 +70,11 @@ export default function Features(props) {
   const handleButtonClick = pageURL => {
     history.push(pageURL);
   };
+
+  //goes to the top of the page
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div >

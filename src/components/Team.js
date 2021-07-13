@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "center",
         marginTop: theme.spacing(10),
-      },
+    },
 }));
 
 export default function Team(props) {
@@ -38,6 +39,12 @@ export default function Team(props) {
     const handleButtonClick = pageURL => {
         history.push(pageURL);
     };
+
+    //goes to the top of the page
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div>
             <Grid item xs={12} className={classes.header}>

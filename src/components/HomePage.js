@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { Button } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
@@ -61,6 +62,11 @@ export default function HomePage(props) {
   const handleButtonClick = pageURL => {
     history.push(pageURL);
   };
+  
+  //goes to the top of the page
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div>
@@ -74,7 +80,7 @@ export default function HomePage(props) {
         <Grid item xs={12} sm={6} >
           <div className={classes.headerContent}>
             <Typography variant="h3" color="primary" gutterBottom>
-              Welcome to CSI Linux
+              Welcome to CSI Linux!
             </Typography>
             <Typography variant="h6" color="primary" paragraph>
               CSI Linux is a focused Linux distribution for digital forensics. We developed an open-source 'theme park' for the cyber security industry. It has tons of capabilities for investigations, analysis and response! CSI Linux is available in both a Virtual Machine Appliance and Bootable distro to use as a daily driver.
@@ -262,7 +268,7 @@ export default function HomePage(props) {
             </Card>
           </Grid>
         </Grid>
-        
+
         <Grid container spacing={4} className={classes.sectionTitles}
           direction="row"
           justifyContent="center"

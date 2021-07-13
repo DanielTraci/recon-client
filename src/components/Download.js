@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -109,13 +110,15 @@ const useStyles = makeStyles((theme) => ({
 export default function Download(props) {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
-    const { history } = props
-    const handleButtonClick = pageURL => {
-        history.push(pageURL);
-    };
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    //goes to the top of the page
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
 
     return (
@@ -173,12 +176,12 @@ export default function Download(props) {
                 <Grid item xs={12} sm={8}>
                     <Box display="flex" justifyContent="center" >
                         <Typography variant="h4" color="primary" >
-                        Subscribe to our publications and news
+                            Subscribe to our publications and news
                         </Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <Box display="flex" justifyContent="center">                        
+                    <Box display="flex" justifyContent="center">
                         <Button variant="outlined" size="large" color="primary" href="https://comms.informationwarfarecenter.com/?p=subscribe&id=1">Subscribe to newsletter</Button>
                     </Box>
                 </Grid>
@@ -326,7 +329,7 @@ export default function Download(props) {
                                     <Button variant="outlined" size="large" color="primary" href="https://csilinux.creator-spring.com/">FEATURED PRODUCTS</Button>
                                 </Box>
                             </Grid>
-                        </Grid>                        
+                        </Grid>
                     </Grid>
                 </TabPanel>
 

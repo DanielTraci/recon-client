@@ -125,7 +125,7 @@ export default function Footer(props) {
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center" >
-            <Typography color='error' variant="body1" align="center">Copyright © CSI LINUX</Typography>
+            <Typography color='error' variant="body2" align="center">Copyright © CSI LINUX</Typography>
           </Box>
         </Grid>
       </Grid>

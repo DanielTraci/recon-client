@@ -1,3 +1,7 @@
+body {
+  font-family: "Consolas"!important;
+}
+
 /* MOBILE - css applies if screen size is less than 768
 - .appMargins gets called in the App.js in render method
 */
@@ -5,6 +9,7 @@
   .appMargins {
     margin-left: 20px;
     margin-right: 20px;
+    
   }
   /* works */
   .tutorialsTabs {
