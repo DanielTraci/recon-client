@@ -49,7 +49,7 @@ export default function Team(props) {
         <div>
             <Grid item xs={12} className={classes.header}>
                 <Typography variant="h3" color="primary" gutterBottom>
-                    Developers
+                    Developersf
                 </Typography>
                 <Typography variant="h5" color="primary" paragraph>
                     "It all started when we saw a black hoodie for the first time"

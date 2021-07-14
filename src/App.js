@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./App.css"
+import config from './config';
 import ContactPage from "./components/ContactPage";
 import Download from "./components/Download";
 import Features from "./components/Features";
@@ -51,13 +52,13 @@ function App(props) {
       subject: event.target.subject.value,
       message: event.target.message.value,
     }
-
+console.log(newMessage)
     // wipe off the contact form after submit
     event.target.name.value = ''
     event.target.email.value = ''
     event.target.subject.value = ''
     event.target.message.value = ''
-    axios.post(`http://localhost:5005/api/contact`, newMessage)
+    axios.post(`${config.API_URL}/api/contact`, newMessage)
       .then((result) => {
         // updates the data in the state
         updateMessages([result.data, ...messages])
@@ -66,7 +67,6 @@ function App(props) {
       /* , //redirects the user to homepage or any other page
       props.history.push('/'), [messages]) */
       .catch((errorObj) => {
-        console.log(errorObj.response.data)
         updateError(errorObj.response.data)
       });
   }

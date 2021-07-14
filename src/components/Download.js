@@ -224,7 +224,7 @@ export default function Download(props) {
                                             ]}
                                         />
                                         <TypeWriterEffect text="~CSI Linux 2021.2 Virtual Appliance minimum requirements: 6+ GB of RAM, 64+ GB free disk space (suggest more),
-                                                2+ Cores, VirtualBox, internet access" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1rem", color: "#FFFFFF" }} typeSpeed={1} cursorColor="#FFFFFF" />
+                                                2+ Cores, VirtualBox, internet access" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1rem", color: "#FFFFFF" }} typeSpeed={1} cursorColor="#FFFFFF" />
                                     </CardContent>
                                 </Card>
                             </Grid>
@@ -291,7 +291,7 @@ export default function Download(props) {
                                                 <FiberManualRecordIcon color="error" />,
                                             ]}
                                         />
-                                        <TypeWriterEffect text="~CSI Linux 2021.2 Bootable Image minimum requirements: 4+ GB of RAM, 80+ GB Hard drive for download, 64+ GB Hard drive or USB, 2+ Cores, Imaging tool (HDDRawCopy is included), internet access" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1rem", color: "#FFFFFF" }} typeSpeed={1} cursorColor="#FFFFFF" />
+                                        <TypeWriterEffect text="~CSI Linux 2021.2 Bootable Image minimum requirements: 4+ GB of RAM, 80+ GB Hard drive for download, 64+ GB Hard drive or USB, 2+ Cores, Imaging tool (HDDRawCopy is included), internet access" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1rem", color: "#FFFFFF" }} typeSpeed={1} cursorColor="#FFFFFF" />
                                     </CardContent>
                                 </Card>
                             </Grid>
@@ -358,7 +358,7 @@ export default function Download(props) {
                                                 <FiberManualRecordIcon color="error" />,
                                             ]}
                                         />
-                                        <TypeWriterEffect text="~CSI Linux 2021.1 SIEM minimum requirements: 8+ GB of RAM, 200+ GB free space (logs get big), 2+ Cores" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1rem", color: "#FFFFFF" }} typeSpeed={1} cursorColor="#FFFFFF" />
+                                        <TypeWriterEffect text="~CSI Linux 2021.1 SIEM minimum requirements: 8+ GB of RAM, 200+ GB free space (logs get big), 2+ Cores" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1rem", color: "#FFFFFF" }} typeSpeed={1} cursorColor="#FFFFFF" />
                                     </CardContent>
                                 </Card>
                             </Grid>

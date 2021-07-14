@@ -80,7 +80,7 @@ export default function HomePage(props) {
         <Grid item xs={12} sm={6} >
           <div className={classes.headerContent}>
             <Typography variant="h3" color="primary" gutterBottom>
-              Welcome to CSI Linux!
+             DFIRing with CSI Linux!
             </Typography>
             <Typography variant="h6" color="primary" paragraph>
               CSI Linux is a focused Linux distribution for digital forensics. We developed an open-source 'theme park' for the cyber security industry. It has tons of capabilities for investigations, analysis and response! CSI Linux is available in both a Virtual Machine Appliance and Bootable distro to use as a daily driver.
@@ -99,7 +99,7 @@ export default function HomePage(props) {
                     <FiberManualRecordIcon color="error" />,
                   ]}
                 />
-                <Typography color='primary'><TypeWriterEffect text="~CSI Linux 2021.2 has been released!" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={70} cursorColor="#FFFFFF" /></Typography>
+                <Typography color='primary'><TypeWriterEffect text="~CSI Linux 2021.2 has been released!" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={70} cursorColor="#FFFFFF" /></Typography>
               </CardContent>
             </Card>
           </div>
@@ -124,7 +124,7 @@ export default function HomePage(props) {
                     <FiberManualRecordIcon color="error" />,
                   ]}
                 />
-                <Typography color='primary'>~We believe that having the right tools to do the job is critical for forensic investigators. That’s why we have created a multi-purpose, all inclusive, investigation environment starting with online investigations (OSINT, social media, domain recon, and dark web) to offline Digital Forensics and Incident Response to Malware Analysis and more. This is an ideal environment for both training and real world investigations. Most of our Dark web/Darknet focus is on Tor, but we also support I2P, Freenet, and Zeronet. CSI Linux SIEM contains the tools you need for identifying local network threats. What makes this different than the hundreds of other options out there? Well... CSI Linux was developed by Computer Forensics, Incident Response, and Competitive Intelligence professionals to meet the current needs for their clients, government agencies, and the industry.<TypeWriterEffect text="~" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
+                <Typography color='primary'>~We believe that having the right tools to do the job is critical for forensic investigators. That’s why we have created a multi-purpose, all inclusive, investigation environment starting with online investigations (OSINT, social media, domain recon, and dark web) to offline Digital Forensics and Incident Response to Malware Analysis and more. This is an ideal environment for both training and real world investigations. Most of our Dark web/Darknet focus is on Tor, but we also support I2P, Freenet, and Zeronet. CSI Linux SIEM contains the tools you need for identifying local network threats. What makes this different than the hundreds of other options out there? Well... CSI Linux was developed by Computer Forensics, Incident Response, and Competitive Intelligence professionals to meet the current needs for their clients, government agencies, and the industry.<TypeWriterEffect text="~" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -179,7 +179,7 @@ export default function HomePage(props) {
                     <FiberManualRecordIcon color="error" />,
                   ]}
                 />
-                <Typography color='primary'>~There is a plethora of information on the Internet and a lot of it is useful during the reconnaissance, OSINT, SOCMINT or Dark web analysis. Tracking a suspect? Want to know what an APT will know about you? Need to link user accounts to prove collusion? These are some of the many challenges many of us face every day. CSI Linux is making this easier and, in many cases, cheaper than ever before.<TypeWriterEffect text="~" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
+                <Typography color='primary'>~There is a plethora of information on the Internet and a lot of it is useful during the reconnaissance, OSINT, SOCMINT or Dark web analysis. Tracking a suspect? Want to know what an APT will know about you? Need to link user accounts to prove collusion? These are some of the many challenges many of us face every day. CSI Linux is making this easier and, in many cases, cheaper than ever before.<TypeWriterEffect text="~" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -207,7 +207,7 @@ export default function HomePage(props) {
                     <FiberManualRecordIcon color="error" />,
                   ]}
                 />
-                <Typography color='primary'>~If a hacker or an APT is your target, how do you catch them? What do you do once you identify the threat? With a combination or state of the art technology and good old-fashioned investigative know-how, CSI Linux is a low budget solution for making your cyber triage and emergency response easier and more streamlined.<TypeWriterEffect text="~" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
+                <Typography color='primary'>~If a hacker or an APT is your target, how do you catch them? What do you do once you identify the threat? With a combination or state of the art technology and good old-fashioned investigative know-how, CSI Linux is a low budget solution for making your cyber triage and emergency response easier and more streamlined.<TypeWriterEffect text="~" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -235,7 +235,7 @@ export default function HomePage(props) {
                     <FiberManualRecordIcon color="error" />,
                   ]}
                 />
-                <Typography color='primary'>~You may never need this, but if you come across an application or process that seems malicious and none of your security solutions are catching the activity, CSI Linux has you covered with our SIEM that includes Elasticsearch, Kibana, Zeek IDS, and other incident response tools. Once you identify the suspicious code, you can use Radare 2 and the NSA's Ghidra to investigate further.<TypeWriterEffect text="~" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
+                <Typography color='primary'>~You may never need this, but if you come across an application or process that seems malicious and none of your security solutions are catching the activity, CSI Linux has you covered with our SIEM that includes Elasticsearch, Kibana, Zeek IDS, and other incident response tools. Once you identify the suspicious code, you can use Radare 2 and the NSA's Ghidra to investigate further.<TypeWriterEffect text="~" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -263,7 +263,7 @@ export default function HomePage(props) {
                     <FiberManualRecordIcon color="error" />,
                   ]}
                 />
-                <Typography color='primary'>~The classic computer forensics also known as “Dead Box” or Postmortem” forensics. Of the dead nothing but good is to be said, and CSI Linux helps you with that. <TypeWriterEffect text="~" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
+                <Typography color='primary'>~The classic computer forensics also known as “Dead Box” or Postmortem” forensics. Of the dead nothing but good is to be said, and CSI Linux helps you with that. <TypeWriterEffect text="~" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1rem" }} typeSpeed={1} cursorColor="#FFFFFF" /></Typography>
               </CardContent>
             </Card>
           </Grid>

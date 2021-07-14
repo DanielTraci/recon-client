@@ -54,7 +54,7 @@ export default function NotFound() {
                   <FiberManualRecordIcon color="error" />,
                 ]}
               />
-              <Typography color='primary'><TypeWriterEffect text="~404 not found! Hold on, we need to put on a special purpose black hoodie to build this page. We would appreciate your help!" textStyle={{ fontFamily: 'Consolas', fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={20} cursorColor="#FFFFFF" /></Typography>
+              <Typography color='primary'><TypeWriterEffect text="~404 not found! Hold on, we need to put on a special purpose black hoodie to build this page. We would appreciate your help!" textStyle={{ fontFamily: "'Inconsolata', monospace", fontWeight: 400, fontSize: "1.5rem" }} typeSpeed={20} cursorColor="#FFFFFF" /></Typography>
             </CardContent>
           </Card>
         </Grid>
