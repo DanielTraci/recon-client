@@ -41,7 +41,7 @@ export default function NotFound() {
     <div>
       <Grid container xs={12}
         direction="row"
-        justify="center"
+        justifyContent="center"
         alignItems="center"
         className={classes.header}>
         <Grid item xs={12} sm={6}>

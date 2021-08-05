@@ -20,6 +20,7 @@ import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
+import clsx from 'clsx'
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subheader: {
     marginBottom: theme.spacing(10),
-},
+  },
   accordionRack: {
     width: 'auto',
     background: "#2D2D2D",
@@ -48,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginTop: theme.spacing(2)
+  },
+  outlinedbuttons: {
+    '&:hover': {
+      color: '#C01F24'
+    }
   },
   searchBar: {
     '& .MuiOutlinedInput-root': {
@@ -67,6 +73,7 @@ export default function Features(props) {
   const classes = useStyles();
   const { allFeatures, customFeatures, onSearch } = props
   const { history } = props
+  
   const handleButtonClick = pageURL => {
     history.push(pageURL);
   };
@@ -80,7 +87,7 @@ export default function Features(props) {
     <div >
       <Grid container spacing={4}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         alignItems="flex-start"
         className={classes.header}>
 
@@ -92,7 +99,9 @@ export default function Features(props) {
           <Typography variant="h5" color="primary" paragraph>
             "We've integrated over 175 tools in CSI Linux. It's a DFIR 'theme park' for the cyber security industry"
           </Typography>
-          <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} className={classes.button} >Send your feedback</Button>
+
+          <Button className={clsx(classes.outlinedbuttons, classes.button)} variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} >Send your feedback</Button>
+        
         </Grid>
 
         {/* Video */}
@@ -109,28 +118,28 @@ export default function Features(props) {
       </Grid>
 
       <Grid container spacing={4} className={classes.subheader}
-                direction="row"
-                justifyContent="center"
-                alignItems="center">
-                <Grid item xs={12} sm={8}>
-                    <Box display="flex" justifyContent="center" >
-                        <Typography variant="h4" color="primary" >
-                        Get the latest news about CSI Linux products
-                        </Typography>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Box display="flex" justifyContent="center">                        
-                        <Button variant="outlined" size="large" color="primary" href="https://comms.informationwarfarecenter.com/?p=subscribe&id=1">Subscribe to newsletter</Button>
-                    </Box>
-                </Grid>
-            </Grid>
+        direction="row"
+        justifyContent="center"
+        alignItems="center">
+        <Grid item xs={12} sm={8}>
+          <Box display="flex" justifyContent="center" >
+            <Typography variant="h4" color="primary" >
+              Get the latest news about CSI Linux products
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Box display="flex" justifyContent="center">
+            <Button className={classes.outlinedbuttons} variant="outlined" size="large" color="primary" href="https://comms.informationwarfarecenter.com/?p=subscribe&id=1">Subscribe to newsletter</Button>
+          </Box>
+        </Grid>
+      </Grid>
 
       {/* Tools accordion */}
       <Grid
         container
         direction="row"
-        justify="center"
+        justifyContent="center"
         alignItems="center">
         <Grid item xs={12} sm={6}>
           {/* All tools */}
@@ -154,20 +163,23 @@ export default function Features(props) {
                     </InputAdornment>
                   ), className: classes.input
                 }} />
+
                 <Typography variant="body1" color="primary">
                   {
                     allFeatures.map((feature, index) => {
                       return (
-                        <List key={index}>
-                          <ListItem >
-                            <ListItemIcon>
-                              <SettingsApplicationsIcon color="error" />
-                            </ListItemIcon>
-                            <ListItemText
-                              primary={feature.name}
-                            />
-                          </ListItem>
-                        </List>
+                        < span key={index}>
+                          <List >
+                            <ListItem >
+                              <ListItemIcon>
+                                <SettingsApplicationsIcon color="error" />
+                              </ListItemIcon>
+                              <ListItemText
+                                primary={feature.name}
+                              />
+                            </ListItem>
+                          </List>
+                        </span>
                       )
                     })
                   }
@@ -190,16 +202,18 @@ export default function Features(props) {
                 {
                   customFeatures.map((feature, index) => {
                     return (
-                      <List key={index}>
-                        <ListItem >
-                          <ListItemIcon>
-                            <SettingsApplicationsIcon color="error" />
-                          </ListItemIcon>
-                          <ListItemText
-                            primary={feature.name}
-                          />
-                        </ListItem>
-                      </List>
+                      < span key={index}>
+                        <List >
+                          <ListItem >
+                            <ListItemIcon>
+                              <SettingsApplicationsIcon color="error" />
+                            </ListItemIcon>
+                            <ListItemText
+                              primary={feature.name}
+                            />
+                          </ListItem>
+                        </List>
+                      </span>
                     )
                   })
                 }

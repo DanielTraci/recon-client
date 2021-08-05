@@ -1,8 +1,8 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles'
 
 const font =  "'Inconsolata', monospace";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   overrides: {
     //background color
     MuiCssBaseline: {

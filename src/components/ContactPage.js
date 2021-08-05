@@ -48,13 +48,16 @@ const useStyles = makeStyles((theme) => ({
     },
     submit: {
         margin: theme.spacing(2, 0, 2),
+        '&:hover': {
+            color: '#C01F24'
+        }
     },
     input: {
         color: "#FFFFFF",
         borderColor: '#FFFFFF'
     },
     logoDesktop: {
-        maxWidth: 200,
+        maxWidth: 175,
     },
     followXsubscription: {
         display: 'flex',
@@ -62,7 +65,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     subscriptionButtonsSpacing: {
-        marginTop: theme.spacing(1)
+        marginTop: theme.spacing(1),
+        '&:hover': {
+            color: '#C01F24'
+        }
       },
 }));
 
@@ -77,7 +83,7 @@ function ContactPage(props) {
 
     return (
 
-        <Grid container spacing={3}
+        <Grid container spacing={4}
             className={classes.header}
         >
             <Grid item xs={12} sm={6}>

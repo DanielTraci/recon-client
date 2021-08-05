@@ -16,9 +16,9 @@ import Footer from './components/Footer';
 import axios from "axios";
 import dataAllFeatures from "./AllFeatures.json"
 import dataCustomFeatures from "./CustomFeatures.json"
-
-
-
+import Blog from "./components/Blog"
+import BlogArticleTemplate from "./components/BlogArticleTemplate"
+import data from './BlogList';
 
 function App(props) {
   //the state of the data
@@ -27,6 +27,8 @@ function App(props) {
   const [allFeatures, updateFeatures] = useState(dataAllFeatures)
   const [fileteredFeatures, updateFilteredFeatures] = useState(dataAllFeatures)
   const [customFeatures, updateCustomFeatures] = useState(dataCustomFeatures)
+  const [content, updatedContent] = useState(data)
+  const [filteredContent, updatedFilteredContent] = useState(data)
 
   // handle Search of tools at /features
   const handleSearch = (event) => {
@@ -40,11 +42,23 @@ function App(props) {
     updateFilteredFeatures(fileteredFeatures)
   }
 
+  // handle Search of articles at /blog
+  const handleSearchBlog = (event) => {
+    // gives us the user's input
+    let userinput = event.target.value
+    // check if the input includes the name of the feature
+    let filteredContent = content.filter((article) => {
+      return article.title.toLowerCase().includes(userinput.toLowerCase())
+    })
+    //updatea the data in the state
+    updatedFilteredContent(filteredContent)
+  }
+
 
   // handle the input from the contact form /contact
   const handleSend = (event) => {
     event.preventDefault()
-    
+
     //creates a new message based on the model we provided in the Message Model on the server side
     let newMessage = {
       name: event.target.name.value,
@@ -52,7 +66,7 @@ function App(props) {
       subject: event.target.subject.value,
       message: event.target.message.value,
     }
-console.log(newMessage)
+    console.log(newMessage)
     // wipe off the contact form after submit
     event.target.name.value = ''
     event.target.email.value = ''
@@ -80,14 +94,23 @@ console.log(newMessage)
         <Route path="/tutorials" component={Tutorials} />
         <Route path="/features" render={(routeProps) => {
           return <Features allFeatures={fileteredFeatures} customFeatures={customFeatures} onSearch={handleSearch} {...routeProps} />
-        //passing the data (all features and custom features) and the Search function to Features Component
+          //passing the data (all features and custom features) and the Search function to Features Component
         }} />
         <Route path="/team" component={Team} />
         <Route path="/contact" render={(routeProps) => {
           return <ContactPage error={error} onSend={handleSend} {...routeProps} />
           //passing the Send function to ContactPage component so that the users can send messages
         }} />
-        <Route component={NotFound}/>
+
+        <Route exact path="/blog" render={(routeProps) => {
+          return <Blog content={filteredContent} onSearchBlog={handleSearchBlog}  {...routeProps} />
+        }} />
+        {/* allArticles={allArticles}  */}
+        <Route path="/blog/:title" render={(routeProps) => {
+          return <BlogArticleTemplate content={content}   {...routeProps} />
+        }} />
+
+        <Route component={NotFound} />
       </Switch>
       <Footer />
 

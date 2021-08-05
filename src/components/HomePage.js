@@ -51,7 +51,13 @@ const useStyles = makeStyles((theme) => ({
   },
   textXiconSpacing: {
     marginTop: theme.spacing(2),
-  }
+  },
+  outlinedbuttons: {
+    minWidth: "150px",
+    '&:hover': {
+      color: '#C01F24'
+    }
+  },
 }));
 
 
@@ -62,7 +68,7 @@ export default function HomePage(props) {
   const handleButtonClick = pageURL => {
     history.push(pageURL);
   };
-  
+
   //goes to the top of the page
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -74,18 +80,18 @@ export default function HomePage(props) {
        ---------------------------*/}
       <Grid container spacing={4}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         alignItems="center"
         className={classes.header}>
         <Grid item xs={12} sm={6} >
           <div className={classes.headerContent}>
             <Typography variant="h3" color="primary" gutterBottom>
-             DFIRing with CSI Linux!
+              Welcome to CSI Linux
             </Typography>
             <Typography variant="h6" color="primary" paragraph>
               CSI Linux is a focused Linux distribution for digital forensics. We developed an open-source 'theme park' for the cyber security industry. It has tons of capabilities for investigations, analysis and response! CSI Linux is available in both a Virtual Machine Appliance and Bootable distro to use as a daily driver.
             </Typography>
-            <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/download")} >Download</Button>
+            <Button className={classes.outlinedbuttons} variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/download")} >Download</Button>
           </div>
         </Grid>
         <Grid item xs={12} sm={6} >
@@ -109,10 +115,12 @@ export default function HomePage(props) {
       {/* section2------Unlock your DFIR superpowers
           --------------------------------------------*/}
       <Grid container>
+
         <Grid item xs={12} >
           <Typography color='primary' variant="h4" align="center" className={classes.sectionTitles} >
             Unlock your DFIR superpowers</Typography>
         </Grid>
+
         <Grid container spacing={4} className={classes.contentMargins}>
           <Grid item xs={12} sm={6}>
             <Card className={classes.terminal} variant="outlined">
@@ -131,7 +139,7 @@ export default function HomePage(props) {
 
           <Grid item xs={12} sm={6} container
             direction="column"
-            justify="space-evenly"
+            justifyContent="space-evenly"
             alignItems="center">
             <Box className={clsx("iconsXtext", classes.sectionTwoIcons)}>
               <FindInPageIcon color="error" style={{ fontSize: 50 }} />
@@ -147,6 +155,7 @@ export default function HomePage(props) {
             </Box>
           </Grid>
         </Grid>
+
       </Grid>
 
       {/* section3----4 DFIR CHALLENGES CSI LINUX SOLVES
@@ -160,7 +169,7 @@ export default function HomePage(props) {
         <Grid container spacing={4} className={classes.contentMargins}>
           <Grid item xs={12} sm={6} container
             direction="column"
-            justify="center"
+            justifyContent="center"
             alignItems="center"
           >
             <Box className="iconsXtext">
@@ -189,7 +198,7 @@ export default function HomePage(props) {
         <Grid container spacing={4} className={classes.contentMargins}>
           <Grid item xs={12} sm={6} container
             direction="column"
-            justify="center"
+            justifyContent="center"
             alignItems="center">
             <Box className="iconsXtext">
               <FindInPageIcon color="error" style={{ fontSize: 100 }} />
@@ -217,7 +226,7 @@ export default function HomePage(props) {
         <Grid container spacing={4} className={classes.contentMargins}>
           <Grid item xs={12} sm={6} container
             direction="column"
-            justify="center"
+            justifyContent="center"
             alignItems="center">
             <Box className="iconsXtext">
               <CodeIcon color="error" style={{ fontSize: 100 }} />
@@ -245,7 +254,7 @@ export default function HomePage(props) {
         <Grid container spacing={4} className={classes.contentMargins}>
           <Grid item xs={12} sm={6} container
             direction="column"
-            justify="center"
+            justifyContent="center"
             alignItems="center">
             <Box className="iconsXtext" >
               <SearchIcon color="error" style={{ fontSize: 100 }} />
@@ -282,7 +291,7 @@ export default function HomePage(props) {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Box display="flex" justifyContent="center">
-              <Button variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")} className={classes.button} >Get in touch with us</Button>
+              <Button className={clsx(classes.outlinedbuttons)} variant="outlined" size="large" color="primary" onClick={() => handleButtonClick("/contact")}  >Get in touch with us</Button>
             </Box>
           </Grid>
         </Grid>

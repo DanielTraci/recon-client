@@ -93,11 +93,23 @@ const useStyles = makeStyles((theme) => ({
         padding: "0px",
     },
     buttons: {
-        '& > *': {
-            margin: theme.spacing(1),
-            marginTop: theme.spacing(5),
-        },
+        minWidth: "150px",
+        //maxWidth: "200px",
+        margin: theme.spacing(1),
+        marginTop: theme.spacing(5),
+        backgroundColor: "#C01F24",
+        color: "#FFFFFF",
+        '&:hover': {
+            backgroundColor: "#0000ff",
+            color: '#FFF'
+        }
     },
+    outlinedbuttons: {
+        '&:hover': {
+            color: '#C01F24'
+        }
+    },
+
     tabsText: {
         color: "#FFFFFF",
     },
@@ -125,7 +137,7 @@ export default function Download(props) {
         <div>
             <Grid container spacing={4}
                 direction="row"
-                justify="flex-start"
+                justifyContent="flex-start"
                 alignItems="flex-end"
                 className={classes.header}>
                 <Grid item xs={12} sm={6} >
@@ -182,7 +194,7 @@ export default function Download(props) {
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <Box display="flex" justifyContent="center">
-                        <Button variant="outlined" size="large" color="primary" href="https://comms.informationwarfarecenter.com/?p=subscribe&id=1">Subscribe to newsletter</Button>
+                        <Button className={classes.outlinedbuttons} variant="outlined" size="large" color="primary" href="https://comms.informationwarfarecenter.com/?p=subscribe&id=1">Subscribe to newsletter</Button>
                     </Box>
                 </Grid>
             </Grid>
@@ -208,13 +220,13 @@ export default function Download(props) {
                         <Grid container spacing={4} className={classes.contentMargins}>
                             <Grid item xs={12} sm={6}>
                                 <Box>
-                                    <Typography color='primary' variant="h6" >CSI Linux 2021.2 (last version) has been packaged in a Virtual Appliance OVA. You must install <Link href="https://www.virtualbox.org/wiki/Downloads" color="error"> VirtualBox</Link> first, install the VirtualBox Extension Pack, then run the downloaded OVA file. This will take some time to build. Installation document can be found <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Virtual%20Appliance.pdf" color="error">here</Link>.
+                                    <Typography color='primary' variant="h6" >CSI Linux 2021.2 (last version) has been packaged in a Virtual Appliance OVA. You must install <Link href="https://www.virtualbox.org/wiki/Downloads" color="error"> VirtualBox</Link> first, install the VirtualBox Extension Pack, then run the downloaded OVA file. This will take some time to build. Installation document can be found <Link href="http://downloads.csilinux.com/Setting%20up%20the%20CSI%20Linux%202021.1%20Virtual%20Appliance.pdf" color="error">here</Link>.
                                     </Typography>
                                 </Box>
                             </Grid>
 
                             <Grid item xs={12} sm={6}>
-                                <Card className={classes.terminal} variant="outlined">
+                                <Card className={classes.terminal} variant="contained">
                                     <CardContent >
                                         <CardHeader className={classes.terminalIcons}
                                             avatar={[
@@ -237,32 +249,14 @@ export default function Download(props) {
                             <Typography color='primary' variant="body2" align="center">Please consider seeding after downloaded</Typography>
                         </Grid>
 
-                        <Grid item xs={12} className={classes.buttons} container
-                            direction="row"
-                            justify="center"
-                            alignItems="center">
-                            <Button variant="outlined" color="primary" href="https://csilinux.com/downloads/CSI_Linux_2021.2.ova.torrent">Torrent File</Button>
-                            <Button variant="outlined" color="primary" href="magnet:?xt=urn:btih:9713DDD8B8B5AEAD0A04D8B79F22C0FB09FEAF1D&dn=CSI%20Linux%202021.2.ova&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2fzephir.monocul.us%3a6969%2fannounce&tr=http%3a%2f%2fshare.camoe.cn%3a8080%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=http%3a%2f%2ftracker.mg64.net%3a6881%2fannounce&tr=http%3a%2f%2ftracker.dutchtracking.nl%3a80%2fannounce&tr=http%3a%2f%2ftracker.kicks-ass.net%3a80%2fannounce&tr=http%3a%2f%2ftracker.edoardocolombo.eu%3a6969%2fannounce&tr=http%3a%2f%2ftracker.ex.ua%3a80%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce">Magnet Link</Button>
-                            <Button variant="outlined" color="primary" href="https://www.dropbox.com/s/ua0dgwc7l86r7jf/CSI%20Linux%202021.2.ova?dl=0">DROPBOX</Button>
-                            <Button variant="outlined" color="primary" href="https://csilinux.com/downloads/CSI%20Linux%202021.2.ova">Direct Download</Button>
-                        </Grid>
-
-                        <Grid container spacing={4} className={classes.supportCSI}
+                        <Grid item xs={12} container
                             direction="row"
                             justifyContent="center"
-                            alignItems="flex-start">
-                            <Grid item xs={12} sm={7}>
-                                <Box display="flex" justifyContent="center">
-                                    <Typography variant="h4" color="primary" align="center">
-                                        Support CSI Linux project
-                                    </Typography>
-                                </Box>
-                            </Grid>
-                            <Grid item xs={12} sm={5}>
-                                <Box display="flex" justifyContent="center">
-                                    <Button variant="outlined" size="large" color="primary" href="https://csilinux.creator-spring.com/">FEATURED PRODUCTS</Button>
-                                </Box>
-                            </Grid>
+                            alignItems="center">
+                            <Button className={classes.buttons} variant="contained" color="primary" href="http://downloads.csilinux.com/CSI_Linux_2021.2.ova.torrent">Torrent File</Button>
+                            <Button className={classes.buttons} variant="contained" color="primary" href="magnet:?xt=urn:btih:9713DDD8B8B5AEAD0A04D8B79F22C0FB09FEAF1D&dn=CSI%20Linux%202021.2.ova&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2fzephir.monocul.us%3a6969%2fannounce&tr=http%3a%2f%2fshare.camoe.cn%3a8080%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=http%3a%2f%2ftracker.mg64.net%3a6881%2fannounce&tr=http%3a%2f%2ftracker.dutchtracking.nl%3a80%2fannounce&tr=http%3a%2f%2ftracker.kicks-ass.net%3a80%2fannounce&tr=http%3a%2f%2ftracker.edoardocolombo.eu%3a6969%2fannounce&tr=http%3a%2f%2ftracker.ex.ua%3a80%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce">Magnet Link</Button>
+                            <Button className={classes.buttons} variant="contained" color="primary" href="https://www.dropbox.com/s/ua0dgwc7l86r7jf/CSI%20Linux%202021.2.ova?dl=0">DROPBOX</Button>
+                            <Button className={classes.buttons} variant="contained" color="primary" href="http://downloads.csilinux.com/CSI%20Linux%202021.2.ova">Direct Download</Button>
                         </Grid>
                     </Grid>
                 </TabPanel>
@@ -276,13 +270,13 @@ export default function Download(props) {
                         <Grid container spacing={4} className={classes.contentMargins}>
                             <Grid item xs={12} sm={6}>
                                 <Box>
-                                    <Typography color='primary' variant="h6" >CSI Linux 2021.2 (last version) has been packaged as a forensic RAW (.dd) copy and HDDRawCopy to use so you can make a bootable drive. This will take some time to build. This is NOT a .ISO file. It is a forensic copy in DD format. Read the <Link href="https://csilinux.com/Documents/Setting%20up%20the%20CSI%20Linux%202021.1%20Bootable%20Image.pdf" color="error">instructions</Link> before you download.
+                                    <Typography color='primary' variant="h6" >CSI Linux 2021.2 (last version) has been packaged as a forensic RAW (.dd) copy and HDDRawCopy to use so you can make a bootable drive. This will take some time to build. This is NOT a .ISO file. It is a forensic copy in DD format. Read the <Link href="http://downloads.csilinux.com/Setting%20up%20the%20CSI%20Linux%202021.1%20Bootable%20Image.pdf" color="error">instructions</Link> before you download.
                                     </Typography>
                                 </Box>
                             </Grid>
 
                             <Grid item xs={12} sm={6}>
-                                <Card className={classes.terminal} variant="outlined">
+                                <Card className={classes.terminal} variant="contained">
                                     <CardContent >
                                         <CardHeader className={classes.terminalIcons}
                                             avatar={[
@@ -303,33 +297,16 @@ export default function Download(props) {
                             <Typography color='primary' variant="body2" align="center">Please consider seeding after downloaded</Typography>
                         </Grid>
 
-                        <Grid xs={12} className={classes.buttons} container
-                            direction="row"
-                            justify="center"
-                            alignItems="center">
-                            <Button variant="outlined" color="primary" href="https://csilinux.com/downloads/CSI_Linux_2021.2_Bootable.torrent">Torrent File</Button>
-                            <Button variant="outlined" color="primary" href="magnet:?xt=urn:btih:D6DA8DED882C5CF64AAD9EE1E07ACDC5F37F5C89&dn=CSI_Linux_2021.2_Bootable.7z&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2fzephir.monocul.us%3a6969%2fannounce&tr=http%3a%2f%2fshare.camoe.cn%3a8080%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=http%3a%2f%2ftracker.kicks-ass.net%3a80%2fannounce&tr=http%3a%2f%2ftracker.ex.ua%3a80%2fannounce&tr=http%3a%2f%2ftracker.mg64.net%3a6881%2fannounce&tr=http%3a%2f%2ftracker.edoardocolombo.eu%3a6969%2fannounce&tr=http%3a%2f%2ftracker.dutchtracking.nl%3a80%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce">Magnet Link</Button>
-                            <Button variant="outlined" color="primary" href="https://www.dropbox.com/s/vntxhbjqidfi31a/CSI_Linux_2021.2_Bootable.7z?dl=0">DROPBOX</Button>
-                            <Button variant="outlined" color="primary" href="https://csilinux.com/downloads/CSI_Linux_2021.2_Bootable.7z">Direct Download</Button>
-                        </Grid>
-
-                        <Grid container spacing={4} className={classes.supportCSI}
+                        <Grid container
                             direction="row"
                             justifyContent="center"
-                            alignItems="flex-start">
-                            <Grid item xs={12} sm={7}>
-                                <Box display="flex" justifyContent="center">
-                                    <Typography variant="h4" color="primary" align="center">
-                                        Support CSI Linux project
-                                    </Typography>
-                                </Box>
-                            </Grid>
-                            <Grid item xs={12} sm={5}>
-                                <Box display="flex" justifyContent="center">
-                                    <Button variant="outlined" size="large" color="primary" href="https://csilinux.creator-spring.com/">FEATURED PRODUCTS</Button>
-                                </Box>
-                            </Grid>
+                            alignItems="center">
+                            <Button className={classes.buttons} variant="contained" color="primary" href="http://downloads.csilinux.com/CSI_Linux_2021.2_Bootable.torrent">Torrent File</Button>
+                            <Button className={classes.buttons} variant="contained" color="primary" href="magnet:?xt=urn:btih:D6DA8DED882C5CF64AAD9EE1E07ACDC5F37F5C89&dn=CSI_Linux_2021.2_Bootable.7z&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2fzephir.monocul.us%3a6969%2fannounce&tr=http%3a%2f%2fshare.camoe.cn%3a8080%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=http%3a%2f%2ftracker.kicks-ass.net%3a80%2fannounce&tr=http%3a%2f%2ftracker.ex.ua%3a80%2fannounce&tr=http%3a%2f%2ftracker.mg64.net%3a6881%2fannounce&tr=http%3a%2f%2ftracker.edoardocolombo.eu%3a6969%2fannounce&tr=http%3a%2f%2ftracker.dutchtracking.nl%3a80%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce">Magnet Link</Button>
+                            <Button className={classes.buttons} variant="contained" color="primary" href="https://www.dropbox.com/s/vntxhbjqidfi31a/CSI_Linux_2021.2_Bootable.7z?dl=0">DROPBOX</Button>
+                            <Button className={classes.buttons} variant="contained" color="primary" href="http://downloads.csilinux.com/CSI_Linux_2021.2_Bootable.7z">Direct Download</Button>
                         </Grid>
+
                     </Grid>
                 </TabPanel>
 
@@ -349,7 +326,7 @@ export default function Download(props) {
                             </Grid>
 
                             <Grid item xs={12} sm={6}>
-                                <Card className={classes.terminal} variant="outlined">
+                                <Card className={classes.terminal} variant="contained">
                                     <CardContent >
                                         <CardHeader className={classes.terminalIcons}
                                             avatar={[
@@ -367,32 +344,34 @@ export default function Download(props) {
                             <Typography color='primary' variant="h4" align="center">Download</Typography>
                             <Typography color='primary' variant="body2" align="center">Follow the link and the instructions</Typography>
                         </Grid>
-                        <Grid item xs={12} className={classes.buttons} container
-                            direction="row"
-                            justify="center"
-                            alignItems="center">
-                            <Button variant="outlined" color="primary" href="https://github.com/Information-Warfare-Center/CSI-SIEM">Github</Button>
-                        </Grid>
-                        <Grid container spacing={4} className={classes.supportCSI}
+                        <Grid container
                             direction="row"
                             justifyContent="center"
-                            alignItems="flex-start">
-                            <Grid item xs={12} sm={7}>
-                                <Box display="flex" justifyContent="center">
-                                    <Typography variant="h4" color="primary" align="center">
-                                        Support CSI Linux project
-                                    </Typography>
-                                </Box>
-                            </Grid>
-                            <Grid item xs={12} sm={5}>
-                                <Box display="flex" justifyContent="center">
-                                    <Button variant="outlined" size="large" color="primary" href="https://csilinux.creator-spring.com/">FEATURED PRODUCTS</Button>
-                                </Box>
-                            </Grid>
+                            alignItems="center">
+                            <Button className={classes.buttons} variant="contained" color="primary" href="https://github.com/Information-Warfare-Center/CSI-SIEM">Github</Button>
                         </Grid>
+
                     </Grid>
                 </TabPanel>
+
             </div>
+            <Grid container spacing={4} className={classes.supportCSI}
+                direction="row"
+                justifyContent="center"
+                alignItems="flex-start">
+                <Grid item xs={12} sm={7}>
+                    <Box display="flex" justifyContent="center">
+                        <Typography variant="h4" color="primary" align="center">
+                            Support CSI Linux project
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={5}>
+                    <Box display="flex" justifyContent="center">
+                        <Button className={classes.outlinedbuttons} variant="outlined" size="large" color="primary" href="https://csilinux.creator-spring.com/">FEATURED PRODUCTS</Button>
+                    </Box>
+                </Grid>
+            </Grid>
         </div>
     );
 }
